@@ -42,18 +42,22 @@
                 <h1>Mitologia<br><span>~ Griega ~</span></h1>
             </div>
             <div id="separador"></div>
-            <form action="https://formsubmit.co/jairianadejesus2005@gmail.com" method="POST" > <!--https://formspree.io/f/xknlkblyA traves de ese link valido, me llegarn mensajes a mi gmail personal de la página donde estaran los datos que los usuarios pusieron en el formulario-->
+            <form action="https://formsubmit.co/93a2f28ca7ed18b4cf287d328d1d0aa2" method="POST" > <!--A traves de ese link, me llegarn mensajes a mi gmail personal de parte de la página donde estaran los datos que los usuarios completaron en el formulario (posiblemente cause un error al intentarlo con el html en el navegador)-->
                 <label for="individuo" name="nombre">Username</label> <br>
-                <input type="text" id="individuo" name="Usuario:"> <br>
+                <input type="text" id="individuo" name="Usuario"> <br>
 
                 <label for="email" name="gmail">E-mail</label> <br>
-                <input type="email" id="email" name="Email:"> <br>
+                <input type="email" id="email" name="Email"> <br>
+
                 <label for="digitos" name="contraseña">Password</label> <br>
-                <input type="password" id="digitos" name="Contraseña:"> <br>
+                <input type="password" id="digitos" name="Contraseña"> <br>
 
                 <p>Al darle "Enviar" aceptar los <a href="https://policies.google.com/terms?hl=es">Terminos de servicios</a> y la <a href="https://policies.google.com/privacy?hl=es">Politica de privacidad</a> de la pagina web, incluida la politica de <a href="https://policies.google.com/technologies/cookies?hl=es">Uso de Cookies</a>.</p> <br>  <!-- Parrafo de terminos y conddiciones sobre la página -->
 
-                <a href="./pages/principal.html"><input type="submit" value="Enviar" class="button" id="button"></a> <!--Encerre el input en una etiqueta nav para que cuando le den click, los envie a la proxima page-->
+                <input type="submit" value="Enviar" class="button" id="button">
+                <!-- Personalizacion del input -->
+                <input type="hidden" name="_next" value="./pages/principal.html">
+                <input type="hidden" name="_captcha" value="false">
             </form>
         </article>
     </section>
