@@ -98,9 +98,25 @@ header .navbar {
     margin: 0 auto;
     padding: 28px 0;
 }
+
 .contend .contend__container form label {
     font-size: 25px;
+    /*Animacionallabel*/
+    animation: desplazamiento 3s linear;
 }
+
+    @keyframes desplazamiento {
+        0% {
+            transform: translateX(-40%); /* Comienza desde la izquierda (fuera de la vista(insivible)) */
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0%); /* Termina en la posición original (en pantalla) */
+            opacity: 1;
+        }
+
+    }
+
 .contend .contend__container form input {
     margin: 10px 25px;
     padding: 10px;
@@ -113,17 +129,222 @@ header .navbar {
     border-radius: 5px;
     background-color: var(--marron-amarillo);
 }
-
 /*Animaciones en los input's*/
 .contend .contend__container form input:hover {
     background-color: var(--cafe-palido);
 }
-
 .contend .contend__container form:hover input {
     transform: scale(1.2);
 }
-	@@ -194,6 +195,80 @@ header .navbar {
-@media screen and (min-width: 768px) and (max-width: 991px){
+.contend .contend__container form #individuo {
+    transition: transform 1s;
+    padding: 8px 10px;
+}
+.contend .contend__container form #email {
+    transition: transform 3s;
+    padding: 8px 10px;
+}
+.contend .contend__container form #digitos {
+    transition: transform 5s;
+    padding: 8px 10px;
+}
+.contend .contend__container form p {
+    margin: auto;
+    text-align: center;
+}
+.contend .contend__container form p a{
+    color: #372819;
+}
+#button {
+    display: flex;
+    cursor: pointer;
+    justify-content: center; 
+    margin: 0 auto;
+    position: relative;
+    background-color: transparent; 
+    color: #372819;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 35%;
+    height: 50px;
+    text-transform: uppercase;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--marron-chocolate);
+    transform: translateY(0px) scale(1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+/*Animaciones al boton*/
+#button:hover{
+    box-shadow: 0 10px 20px var(--marron-beige);
+    background: linear-gradient(135deg,#cebc9b,#7A664B );
+    transform: translateY(-20%) scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+/*-------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------Medias-queries-(Responsive)-----------------------------------------------------*/
+/*Para telefonos moviles (portatil)*/
+@media screen and (min-width:360px) and (max-width:412px) {
+    .contend {
+        background-image: url(../img/fondo__responsive.jpg);
+        display: flex;
+    }
+    .contend .contend__container .contenedor-titulo {
+        padding-top: 15px;
+    }
+    .contend .contend__container h1 {
+        font-size: 20px;
+        margin: 0;
+        /*Animacion*/
+        overflow: hidden; /* Para ocultar el texto completo */
+        border-right:transparent; /* Efecto del cursor de la máquina de escribir */
+        white-space: nowrap; /* Evitar el salto de línea */
+        margin: 0 auto; 
+        letter-spacing: 1px; /* Espaciado entre letras */
+        animation: monoescrito 4s steps(18) infinite; /* 5s de duración total, 18 pasos para 18 letras */
+    }
+    @keyframes monoescrito {
+        from {
+            width: 0;
+        }
+        to {
+            width: calc(1em * 10); /* Ancho total del texto (40 letras) */
+        }
+    }
+
+    .contend .contend__container h1 span {
+        font-size: 30px;
+        bottom: 10px;
+    }
+    .contend .contend__container form {
+        padding: 10px 0;
+    }
+    .contend .contend__container form label {
+        font-size: 20px;
+    }
+
+    .contend .contend__container form:hover input {
+        transform: none;
+    }
+    .contend .contend__container form #individuo, .contend .contend__container form #email, .contend .contend__container form #digitos{
+        transition: none;
+        margin: 0 auto;
+        width: 100%;
+        padding: 4px 10px;
+    }
+    .contend .contend__container form #individuo:active, .contend .contend__container form #email:active, .contend .contend__container form #digitos:active {
+        background-color: var(--cafe-palido);
+        border: solid 1px var(--marron-beige);
+    }
+    .contend .contend__container form p {
+        font-size: small;
+        margin-top: 14px;
+    }
+    #button {
+        width: 50%;
+        height: 42px;
+        box-shadow: 0 10px 20px var(--marron-beige);
+        background: linear-gradient(135deg,#cebc9b,#7A664B );
+        margin-bottom: 20px;
+    }
+    #button:hover {
+        transform: none;
+        transition: none;
+    }
+    #button:active{
+        color: var(--cafe-palido);
+        background: var(--marron-cafe);
+        box-shadow: 0 10px 20px var(--cafe-palido);
+    }
+}
+@media screen and (min-width:413px) and (max-width:768px) {
+    .contend {
+        background-image: url(../img/fondo__responsive.jpg);
+        display: flex;
+    }
+    .contend .contend__container{
+        width: 75%;
+    }
+    .contend .contend__container form {
+        width: 85%;
+        padding: 16px 0 28px;
+    }
+    .contend .contend__container .contenedor-titulo {
+        padding-top: 15px;
+    }
+    .contend .contend__container h1 {
+        font-size: 30px;
+        margin: 0;
+        /*Animacion*/
+        overflow: hidden; /* Para ocultar el texto completo */
+        border-right:transparent; /* Efecto del cursor de la máquina de escribir */
+        white-space: nowrap; /* Evitar el salto de línea */
+        margin: 0 auto; 
+        letter-spacing: 1px; /* Espaciado entre letras */
+        animation: monoescrito 4s steps(18) infinite; /* 5s de duración total, 18 pasos para 18 letras */
+    }
+    @keyframes monoescrito {
+        from {
+            width: 0;
+        }
+        to {
+            width: calc(1em * 10); /* Ancho total del texto (40 letras) */
+        }
+    }
+    .contend .contend__container h1 span {
+        font-size: 30px;
+        bottom: 10px;
+    }
+    .contend .contend__container form label {
+        font-size: 20px;
+        animation: desplazamiento 3s linear;
+}
+
+    @keyframes desplazamiento {
+        0% {
+            transform: translateX(-40%); /* Comienza desde la izquierda (fuera de la vista(insivible)) */
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0%); /* Termina en la posición original (en pantalla) */
+            opacity: 1;
+        }
+
+    }
+    .contend .contend__container form #individuo, .contend .contend__container form #email, .contend .contend__container form #digitos{
+        transition: none;
+        margin: 0 auto;
+        width: 100%;
+        padding: 4px 10px;
+    }
+    .contend .contend__container form #individuo:active, .contend .contend__container form #email:active, .contend .contend__container form #digitos:active {
+        background-color: var(--cafe-palido);
+        border: solid 1px var(--marron-beige);
+    }
+    .contend .contend__container form p {
+        font-size: small;
+        margin-top: 14px;
+    }
+    #button {
+        width: 50%;
+        height: 42px;
+        box-shadow: 0 10px 20px var(--marron-beige);
+        background: linear-gradient(135deg,#cebc9b,#7A664B );
+        margin-bottom: 20px;
+    }
+    #button:hover {
+        transform: none;
+        transition: none;
+    }
+    #button:active{
+        color: var(--cafe-palido);
+        background: var(--marron-cafe);
+        box-shadow: 0 10px 20px var(--cafe-palido);
+    }
+}
+/*Para tabletas (en modo vertical)*/
+@media screen and (min-width:768px) and (max-width: 991px){
     .contend {
         background-image: url(../img/fondo__responsive.jpg);
         display: flex;
@@ -148,34 +369,16 @@ header .navbar {
     }
     /**/
 
-    /*Animacion para los labels*/
-    .contend .contend__container form label {
-        animation: slideRight 3s linear;
-}
-
-    @keyframes slideRight {
-        0% {
-            transform: translateX(-40%); /* Comienza desde la izquierda (fuera de la vista(insivible)) */
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0%); /* Termina en la posición original (en pantalla) */
-            opacity: 1;
-        }
-    }
-    /**/
 
     .contend .contend__container form input {
         transition: none;
     }
-
     .contend .contend__container form #individuo, .contend .contend__container form #email, .contend .contend__container form #digitos{
         padding: 10px 20px;
         width: 100%;
         margin: 5px 0;
         height: 50px;
     }
-
     .contend .contend__container form #individuo:active, .contend .contend__container form #email:active, .contend .contend__container form #digitos:active {
         background-color: var(--cafe-palido);
         border: solid 1px var(--marron-beige);
@@ -183,11 +386,9 @@ header .navbar {
     .contend .contend__container form:hover input {
         transform: none;
     }
-
     .contend .contend__container form p{
         margin-top: 16px;
     }
-
     #button{
         box-shadow: 0 10px 20px var(--marron-beige);
         background: linear-gradient(135deg,#cebc9b,#7A664B );
@@ -202,7 +403,6 @@ header .navbar {
         box-shadow: 0 10px 20px var(--cafe-palido);
     }
 }
-
 /*Para tabletas (en modo horizontal)*/
 @media screen and (min-width: 992px) and (max-width: 1199px){
     body {
