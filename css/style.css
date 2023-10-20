@@ -1,4 +1,4 @@
-/*Paleta de colores y dos fuentes (incluidas en el html)e*/
+/*Paleta de colores y dos fuentes (incluidas en el html)*/
 :root { 
     --font-primero: 'Bebas Neue', cursive;
     --white: #e3dfd7;
@@ -19,6 +19,14 @@ html, body {
     width: 100%;
     height: 100%;
 }
+/* #inactive {
+    display: none;
+    text-decoration: none;
+}
+#inactive span {
+    font-family: none;
+} */
+
 /*-------------------------------------------------------------------------------------------*/
 /*Estilos del encabezado*/
 header {
@@ -54,6 +62,7 @@ header .navbar {
     display: grid; /*agregue este grid para que me hiciera mas facil posicionar el formulario y para que se viera bien junto la imagen de fondo*/
     grid-template-columns: 1fr 1fr;
 }
+
 /*Contenedor del contenido (Titulo, el formulario...)*/
 .contend .contend__container {
     grid-column: 1;
@@ -66,6 +75,8 @@ header .navbar {
     align-items: center;
     flex-direction: column;
 }
+
+/*Estilos del titulo*/
 .contend .contend__container .contenedor-titulo {
     padding-top: 30px;
 }
@@ -101,7 +112,7 @@ header .navbar {
 
 .contend .contend__container form label {
     font-size: 25px;
-    /*Animacionallabel*/
+    /*animacion del label*/
     animation: desplazamiento 3s linear;
 }
 
@@ -114,9 +125,8 @@ header .navbar {
             transform: translateX(0%); /* Termina en la posición original (en pantalla) */
             opacity: 1;
         }
-
+    
     }
-
 .contend .contend__container form input {
     margin: 10px 25px;
     padding: 10px;
@@ -148,6 +158,8 @@ header .navbar {
     transition: transform 5s;
     padding: 8px 10px;
 }
+
+/*estilos delparrafo*/
 .contend .contend__container form p {
     margin: auto;
     text-align: center;
@@ -155,7 +167,13 @@ header .navbar {
 .contend .contend__container form p a{
     color: #372819;
 }
+
+
+/*estilos del boton*/
 #button {
+    width: auto;
+    height: 50px;
+    padding: 10px;
     display: flex;
     cursor: pointer;
     justify-content: center; 
@@ -166,22 +184,26 @@ header .navbar {
     font-size: 17px;
     font-weight: 600;
     border-radius: 10px;
-    width: 35%;
-    height: 50px;
     text-transform: uppercase;
     overflow: hidden;
     box-shadow: 0 10px 20px var(--marron-chocolate);
     transform: translateY(0px) scale(1);
     transition: transform 0.5s cubic-bezier(0.4, 0, 1, 1);
 }
+
+#link{
+    text-decoration: none;
+}
 /*Animaciones al boton*/
-#button:hover{
+#button:hover, #link:hover{
     box-shadow: 0 10px 20px var(--marron-beige);
     background: linear-gradient(135deg,#cebc9b,#7A664B );
-    transform: translateY(-20%) scale(1.1);
+    transform: translateY(-10%) scale(1.1);
     transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 /*-------------------------------------------------------------------------------------------*/
+
+
 
 /*----------------------------------------Medias-queries-(Responsive)-----------------------------------------------------*/
 /*Para telefonos moviles (portatil)*/
@@ -212,7 +234,7 @@ header .navbar {
             width: calc(1em * 10); /* Ancho total del texto (40 letras) */
         }
     }
-
+    
     .contend .contend__container h1 span {
         font-size: 30px;
         bottom: 10px;
@@ -223,7 +245,6 @@ header .navbar {
     .contend .contend__container form label {
         font-size: 20px;
     }
-
     .contend .contend__container form:hover input {
         transform: none;
     }
@@ -258,7 +279,7 @@ header .navbar {
         box-shadow: 0 10px 20px var(--cafe-palido);
     }
 }
-@media screen and (min-width:413px) and (max-width:768px) {
+@media screen and (min-width:413px) and (max-width:767px) {
     .contend {
         background-image: url(../img/fondo__responsive.jpg);
         display: flex;
@@ -275,7 +296,6 @@ header .navbar {
     }
     .contend .contend__container h1 {
         font-size: 30px;
-        margin: 0;
         /*Animacion*/
         overflow: hidden; /* Para ocultar el texto completo */
         border-right:transparent; /* Efecto del cursor de la máquina de escribir */
@@ -292,14 +312,19 @@ header .navbar {
             width: calc(1em * 10); /* Ancho total del texto (40 letras) */
         }
     }
+    
     .contend .contend__container h1 span {
         font-size: 30px;
         bottom: 10px;
     }
+    .contend .contend__container form:hover input {
+        transform: none;
+    }
+
     .contend .contend__container form label {
         font-size: 20px;
         animation: desplazamiento 3s linear;
-}
+    }
 
     @keyframes desplazamiento {
         0% {
@@ -310,7 +335,7 @@ header .navbar {
             transform: translateX(0%); /* Termina en la posición original (en pantalla) */
             opacity: 1;
         }
-
+    
     }
     .contend .contend__container form #individuo, .contend .contend__container form #email, .contend .contend__container form #digitos{
         transition: none;
@@ -349,7 +374,6 @@ header .navbar {
         background-image: url(../img/fondo__responsive.jpg);
         display: flex;
     }
-
     /*Animacion para el titulo*/
     .contend .contend__container h1 {
         overflow: hidden; /* Para ocultar el texto completo */
@@ -368,8 +392,6 @@ header .navbar {
         }
     }
     /**/
-
-
     .contend .contend__container form input {
         transition: none;
     }
