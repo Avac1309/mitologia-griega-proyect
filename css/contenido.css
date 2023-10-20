@@ -1,0 +1,258 @@
+/*Variables globales*/
+:root { 
+    --font-primero: 'Bebas Neue', cursive;
+    --white: #e3dfd7;
+    --white-amarillo: #f5deb3;
+    --amarillo-cafe:#f5c37d;
+    --beige-claro: #9E927E;
+    --cafe-palido: #9c8c6f;
+    --marron-beige:#7A664B;
+    --marron-amarillo: #8E7E62;
+    --marron-cafe-claro: #595049;
+    --marron-cafe: #483A24;
+    --marron-chocolate: #372819;
+    --font-family-cursive: 'Dancing Script', cursive;
+    --font-family-elegante: 'Young Serif', serif;
+}
+html, body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/*Estilos al contenedor principal*/
+.principal {
+    height: 700px;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/564x/ec/91/81/ec91819d3e2ab1ab3ac55f98101330a8.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;/*codigo para que la imagen ocupe toda la pantalla del dispositivo*/
+    background-attachment: fixed; /*Esto me asegura que mientras la pagina sea responsiva, la imagen se adapte a cualquier tipo de pantalla sin configurarme un scroll*/
+}
+/*Estilos al navbar (encabezado)*/
+.principal header{
+    width: 100%;
+}
+
+.principal header nav {
+    display: flex;
+    align-items: center;
+    padding-right: 90px;
+    padding-top: 23px;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.principal header nav a{
+    color: var(--marron-beige);
+    border: 1px solid;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 22px;
+    background-color: #f5deb300;
+}
+
+.principal .introduction {
+    width: 40%; 
+    margin: 5% 52%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Estilos al titulo*/
+.principal .introduction .contenedor-titulo {
+    padding-top: 30px;
+}
+.principal .introduction .contenedor-titulo h1 {
+    font-family: var(--font-family-elegante);
+    color: var(--beige-claro);
+    font-weight: 550;
+    font-size: 55px;
+    text-align: center;
+}
+.principal .introduction .contenedor-titulo h1 span {
+    font-family: var(--font-family-cursive);
+    font-size: 60px;
+    font-weight: 400;
+    position: relative;
+    bottom: 20px;
+}
+/*Estilos del parrafo*/
+.principal .introduction .contenedor-texto {
+    width: 80%;
+}
+.principal .introduction .contenedor-texto p {
+    color: var(--beige-claro);
+    text-align: center;
+    font-size: 19px;
+}
+
+
+/*Estilos al segundo cotenedor del html*/
+.secundary {
+    background-color: var(--beige-claro);
+    height: 550px;
+    width: 100%;
+}
+.secundary .cards-flouters{
+    display: flex;
+    gap: 3%; /*separacion entre los contenedores flexibles*/
+    justify-content: center;
+    position: relative;
+    bottom: 70px;
+}
+
+/*ajuste en los primeros contenedores flotantes*/
+.secundary .cards-flouters div{
+    margin: 0 25px;
+    width: 15%;
+    height: 200px;
+    background-color: var(--marron-cafe-claro);
+    border-bottom-left-radius: 20px; /*radio al lado izquierdo parte inferior del contenedor*/
+    border-top-right-radius: 20px; /*radio al lado derecho parte superior del contenedor*/
+    box-shadow: 5px 7px 0px 0px var(--marron-cafe);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secundary .cards-flouters div img {
+    width: 55%;
+    height: auto;
+}
+.secundary .cards-flouters div a {
+    color: var(--beige-claro);
+    font-size: 30px;
+}
+
+.secundary .contend {
+    background-color: var(--marron-amarillo);
+    width: 70%;
+    height: 400px;
+    position: relative; /*"relative" para que se ueda colocar el contenedor de manera flotante*/
+    bottom: -20px;
+    margin: 0 auto;
+    display: grid; /*para ubicar mejor los contenedores hijos*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/*contenedor image*/
+.secundary .contend .izq {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/564x/0a/d7/bd/0ad7bdd280da505eb858f8aff1338ee3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*contenedor contend*/
+.secundary .contend .drch {
+    grid-column: 2;
+    grid-row: 1;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.secundary .contend .drch h2 {
+    font-size: xx-large;
+    color: var(--marron-chocolate);
+    margin: 20px 0;
+    font-family: -webkit-body;
+    text-shadow: 0 8px 12px var(--marron-cafe);
+}
+.secundary .contend .drch p {
+    color: #1f170f;
+    text-align: justify;
+    font-size: 20px;
+}
+.secundary .contend .drch p a{
+    color: var(--marron-cafe-claro);
+}
+
+/***/
+.two-contends .flex-aside{
+    background-color: #151515;
+    height: 400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.two-contends .flex-aside section{
+    width: 100%;
+    padding: 15px;
+}
+
+.two-contends .flex-aside .izquierda {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #52473f;
+    grid-column: 1fr;
+}
+
+.two-contends .flex-aside .derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2d2221;
+    grid-column: 1fr;
+}
+
+.two-contends p, .two-contends h4 {
+    color: #9E927E;
+}
+
+/*estilos a las imagenes de muestra*/
+.images {
+    height: 600px;
+    width: 100%;
+    display: flex;
+}
+
+
+.images .cards-image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.images .cards-image div {
+    background-color: rgb(204, 219, 128);
+    width: 100%;
+    height: 100%;
+}
+
+.images .cards-image div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*estilo al footer*/
+footer {
+    background-color: var(--marron-chocolate);
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
