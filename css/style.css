@@ -1,3 +1,4 @@
+/*Paleta de colores y dos fuentes (incluidas en el html)e*/
 :root { 
     --font-primero: 'Bebas Neue', cursive;
     --white: #e3dfd7;
@@ -17,7 +18,6 @@ html, body {
     width: 100%;
     height: 100%;
 }
-
 /*-------------------------------------------------------------------------------------------*/
 /*Estilos del encabezado*/
 header {
@@ -25,14 +25,12 @@ header {
     height: auto;
     background-color: var(--beige-claro);
 }
-
 /*Estilos de los iconos → Redes Sociales*/ /*con bootstrap*/
 header .navbar {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 #degrades {
     width: 100%;
     height: 20px;
@@ -41,7 +39,6 @@ header .navbar {
     box-shadow: 0px 11px 20px 2px rgba(245,222,179,1);
 }
 /*-------------------------------------------------------------------------------------------*/
-
 /*-------------------------------------------------------------------------------------------*/
 /*Estilos de la página: Imagen de fondo*/
 .contend {
@@ -69,23 +66,17 @@ header .navbar {
     flex-direction: column;
 }
 
-/*Estilos del titulo de la página*/
-/* .contend .contend__container .contenedor-titulo { animation: slideIn 3s linear infinite;}
-@keyframes slideIn {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}*/
+.contend .contend__container .contenedor-titulo {
+    padding-top: 30px;
+}
+
 .contend .contend__container h1 {
     font-family: var(--font-family-elegante);
     font-weight: 550;
     font-size: 40px;
     text-align: center;
-    margin-top: 30px;
 }
+
 .contend .contend__container h1 span {
     font-family: var(--font-family-cursive);
     font-size: 60px;
@@ -93,7 +84,6 @@ header .navbar {
     position: relative;
     bottom: 20px;
 }
-
 /*Div separador*/
 .contend .contend__container #separador {
     width: 80%;
@@ -103,49 +93,111 @@ header .navbar {
     background: var(--white-amarillo);
     box-shadow: 0px 0px 20px 2px rgba(245,222,179,1);
 }
-
 /*Estilos del formulario*/
 .contend .contend__container form {
     width: 80%;
-    height: auto;}
-
+    height: auto;
+    margin: 0 auto;
+    padding: 28px 0;
+}
+.contend .contend__container form label {
+    font-size: 25px;
+}
 .contend .contend__container form input {
     margin: 10px 25px;
     padding: 10px;
     width: 80%;
     color: black;
     cursor: pointer;
-    height: 40px;
-    display: flex;
-    justify-content: center;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--marron-amarillo);
 }
+
+.contend .contend__container form input:hover {
+    background-color: #9c8c6f;
+}
+
+/*Animaciones en los input's*/
+.contend .contend__container form:hover input {
+    transform: scale(1.2);
+}
+.contend .contend__container form #individuo {
+    transition: transform 1s;
+    padding: 8px 10px;
+}
+
+.contend .contend__container form #email {
+    transition: transform 3s;
+    padding: 8px 10px;
+}
+
+.contend .contend__container form #digitos {
+    transition: transform 5s;
+    padding: 8px 10px;
+}
+
+.contend .contend__container form p {
+    margin: auto;
+    text-align: center;
+}
+.contend .contend__container form p a{
+    color: #372819;
+}
+
+#button {
+    display: flex;
+    cursor: pointer;
+    justify-content: center; 
+    margin: 0 auto;
+    position: relative;
+    background-color: transparent; 
+    color: #372819;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 35%;
+    height: 50px;
+    text-transform: uppercase;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--marron-chocolate);
+    transform: translateY(0px) scale(1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+
+/*Animaciones al boton*/
+#button:hover{
+    box-shadow: 0 10px 20px var(--marron-beige);
+    background: linear-gradient(135deg,#cebc9b,#7A664B );
+    transform: translateY(-20%) scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
 /*-------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------Medias-queries-(Responsive)-----------------------------------------------------*/
 /*Para telefonos moviles (portatil)*/
 @media screen and (min-width: 767px) {
-
+    
 }
-
 /*Para tabletas (en modo vertical)*/
 @media screen and (min-width: 768px) and (max-width: 991px){
     .contend {
         background-image: url(../img/fondo__responsive.jpg);
     }
 }
-
 /*Para tabletas (en modo horizontal)*/
 @media screen and (min-width: 992px) and (max-width: 1199px){
     body {
         overflow: hidden;
     }
-
     .contend {
         display: flex;
         justify-content: flex-start;
         align-items: center;
     }
-
     .contend  .contend__container {
         width: 35%;
         margin: 0 80px;
@@ -153,25 +205,21 @@ header .navbar {
         height: auto;
         overflow: hidden;
     }
-
+    
     .contend .contend__container #separador {
         position: relative;
         bottom: 20px;
     }
-
     .contend .contend__container form {
         padding: 0;
     }
-
     .contend .contend__container form label{
         font-size: 22px;
     }
-
     .contend .contend__container form input {
         padding: 8px;
     }
 }
-
 /*Para computadoras portatiles (por ejemplo un Surface Pron 7)*/
 @media screen and (min-width: 1200px) {
     .contend .contend_container {
