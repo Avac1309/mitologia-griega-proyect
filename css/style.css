@@ -28,8 +28,15 @@ header {
     background-color: var(--beige-claro);
 }
 /*Estilos de los iconos → Redes Sociales*/ /*con bootstrap*/
+header .navbary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header .navbar {
     display: flex;
+    gap: 5px;
     align-items: center;
     justify-content: center;
 }
