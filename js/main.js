@@ -1,8 +1,10 @@
-// const enviar = document.querySelector("#button")
-// const miForm = document.querySelector("#formulario")
+const opciones = document.getElementById('opciones')
+const opcionesMenu = document.querySelector(".aside-de-opciones")
+const opcionesMenuClosed = document.querySelector(".closed-opciones")
 
-// miForm.addEventListener("submit", boton)
+opciones.addEventListener('click', abrirOpciones)
 
-// function boton() {
-//     window.location.href = "../pages/principal.html"
-// }
+function abrirOpciones () {
+    console.log('abrio el menu')
+    opcionesMenu.classList.toggle('inactive')
+}

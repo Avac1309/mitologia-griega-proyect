@@ -23,7 +23,9 @@ html, body {
 body::-webkit-scrollbar{
     display: none;
 }
-
+.inactive {
+    display: none;
+}
 /*Estilos al contenedor principal*/
 .principal {
     height: 700px;
@@ -35,27 +37,71 @@ body::-webkit-scrollbar{
     background-attachment: fixed; /*Esto me asegura que mientras la pagina sea responsiva, la imagen se adapte a cualquier tipo de pantalla sin configurarme un scroll*/
 }
 /*Estilos al navbar (encabezado)*/
-.principal header{
-    width: 100%;
-}
-
-.principal header nav {
+.principal  nav {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding-right: 90px;
     padding-top: 23px;
     justify-content: flex-end;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.principal header nav a{
+.principal  nav h6{
     color: var(--marron-beige);
     border: 1px solid;
     font-weight: 700;
     border-radius: 5px;
     padding: 6px 12px;
     font-size: 22px;
+    cursor: pointer;
     background-color: #f5deb300;
+}
+
+.principal aside .opciones-container .closed-opciones {
+    color: var(--white);
+    background-color: var(--marron-chocolate);
+    border-radius: 5px;
+    font-size: smaller;
+    position: absolute;
+    margin: 5px 20px;
+    font-weight: bolder;
+    right: 5px;
+    padding: 5px 8px; 
+    cursor: pointer;
+}
+
+.principal aside .opciones-container {
+    background-color: var(--marron-beige);
+    width: 25%;
+    padding: 10px 35px;
+    height: auto;
+    position: fixed;
+    right: 0;
+    margin: 5px 90px;
+    z-index: 3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.principal aside .opciones-container a {
+    color: var(--white);
+    margin: 5px 0;
+    font-size: 22px;
+    cursor: default;
+}
+
+.principal aside .opciones-container a h3 {
+    font-weight: 400;
+    font-family: var(--font-family-elegante);
+    margin: 5px 0;
+    text-shadow: 0 8px 5px var(--marron-chocolate);
+    cursor: pointer;
+}
+
+.principal aside .opciones-container a ul {
+    margin: 0 0 0 60px;
+    list-style: circle;
 }
 
 .principal .introduction {
