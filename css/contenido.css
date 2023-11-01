@@ -57,18 +57,6 @@ body::-webkit-scrollbar{
     background-color: #f5deb300;
 }
 
-.principal aside .opciones-container .closed-opciones {
-    color: var(--white);
-    background-color: var(--marron-chocolate);
-    border-radius: 5px;
-    font-size: smaller;
-    position: absolute;
-    margin: 5px 20px;
-    font-weight: bolder;
-    right: 5px;
-    padding: 5px 8px; 
-    cursor: pointer;
-}
 
 .principal aside .opciones-container {
     background-color: var(--marron-beige);
@@ -333,7 +321,7 @@ body::-webkit-scrollbar{
     margin-bottom: 25px;
 }
 
-.slider #slider_contend {
+.slider .slider_contend {
     overflow-x: scroll;
     scroll-snap-type: both;
     display: flex;
@@ -342,25 +330,25 @@ body::-webkit-scrollbar{
     width: 70%;
     height: 80%;
 }
-.slider #slider_contend::-webkit-scrollbar{
+.slider .slider_contend::-webkit-scrollbar{
     width: 25%;
 }
-.slider #slider_contend::-webkit-scrollbar-track{
+.slider .slider_contend::-webkit-scrollbar-track{
     background: var(--beige-claro);
     border-radius: 20px;
 }
-.slider #slider_contend::-webkit-scrollbar-thumb{
+.slider .slider_contend::-webkit-scrollbar-thumb{
     background-color: var(--marron-cafe);
     border-radius: 20px;
 }
 
-.slider #slider_contend div {
+.slider .slider_contend div {
     scroll-snap-align: start;
     display: flex;
     border-radius: 0.25rem;
 }
 
-.slider #slider_contend div img {
+.slider .slider_contend div img {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -574,7 +562,7 @@ footer article p {
         font-size: xx-large;
         text-align: center;
     }
-    .slider #slider_contend{
+    .slider .slider_contend{
         width: 80%;
     }
 
@@ -642,7 +630,7 @@ footer article p {
         font-size: large;
     }
 
-    .slider #slider_contend{
+    .slider .slider_contend{
         width: 80%;
     }
 
@@ -688,7 +676,7 @@ footer article p {
         width: 90%;
     }
 
-    .slider #slider_contend{
+    .slider .slider_contend{
         width: 85%;
     }
 }
@@ -711,7 +699,7 @@ footer article p {
         width: 80%;
     }
 
-    .slider #slider_contend{
+    .slider .slider_contend{
         width: 80%;
     }
 }
