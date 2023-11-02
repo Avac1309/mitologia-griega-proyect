@@ -179,6 +179,18 @@ header nav aside .opciones-container a ul {
     text-align: justify;
 }
 
+.contenido .contenido_container section q{
+    color: #cabfaf;
+    margin: 20px auto;
+    font-size: 20px;
+    width: 70%;
+    text-align: inherit;
+    display: block;
+    border-left: 2px solid #f5deb33d;
+    border-radius: 8px;
+    padding: 0 20px;
+    text-shadow: 0 0px 5px var(--beige-claro);
+}
 /**/
 footer {
     width: 100%;
@@ -241,6 +253,13 @@ footer .footer_redes ul li a img {
         margin: 10px 5px;
         font-size: 17px;
     }
+    .contenido .contenido_container section q{
+        margin: 5px auto;
+        width: 95%;
+        text-shadow: 0 0px 2px var(--beige-claro);
+        text-align: justify;
+        font-size: 18px;
+    }
 }
 /*Para tabletas (en modo vertical)*/
 @media screen and (min-width:768px) and (max-width: 991px){
@@ -249,6 +268,9 @@ footer .footer_redes ul li a img {
     }
     .contenido {
         width: 85%;
+    }
+    .contenido .contenido_container section q{
+        width: 90%;
     }
 }
 /*Para tabletas (en modo horizontal)*/

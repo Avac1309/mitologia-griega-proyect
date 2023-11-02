@@ -179,6 +179,23 @@ header nav aside .opciones-container a ul {
     text-align: justify;
 }
 
+.contenido .contenido_container ul {
+    padding: 12px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 20px;
+    width: 100%;
+    height: auto;
+}
+.contenido .contenido_container ul li {
+    color: #cabfaf;
+    margin: 0px 20px;
+    font-size: 20px;
+    text-align: justify;
+    list-style-position: inside;
+}
+
+
 /**/
 footer {
     width: 100%;
@@ -240,6 +257,14 @@ footer .footer_redes ul li a img {
     .contenido .contenido_container section p {
         margin: 10px 5px;
         font-size: 17px;
+    }
+
+    .contenido .contenido_container ul{
+        display: flow;
+        padding: 10px 0px;  
+    }
+    .contenido .contenido_container ul li{
+        margin: 0 10px;
     }
 }
 /*Para tabletas (en modo vertical)*/

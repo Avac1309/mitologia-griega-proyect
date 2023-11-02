@@ -172,11 +172,59 @@ header nav aside .opciones-container a ul {
     background: linear-gradient(45deg, #c0a177, transparent);
 }
 
-.contenido .contenido_container section p {
+.contenido .contenido_container section p{
     color: #cabfaf;
     margin: 20px 10px;
     font-size: 20px;
     text-align: justify;
+}
+
+.contenido .contenido_container section q{
+    color: #cabfaf;
+    margin: 20px auto;
+    font-size: 20px;
+    width: 70%;
+    text-align: inherit;
+    display: block;
+    border-left: 2px solid #f5deb33d;
+    border-radius: 8px;
+    padding: 0 20px;
+    text-shadow: 0 0px 5px var(--beige-claro);
+}
+/**/
+.contenido .contenido_container section ul {
+    padding: 12px 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido .contenido_container section ul li {
+    color: #cabfaf;
+    margin: 5px 20px;
+    font-size: 20px;
+    text-align: justify;
+    list-style-position: inside;
+}
+
+/**/
+.contenido .contenido_container section ol {
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin-left: 100px;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido .contenido_container section ol li {
+    color: var(--white-amarillo);
+    margin: 1px 30px;
+    list-style: decimal;
+    font-size: 20px;
+    text-align: justify;
+    list-style-position: inside;
 }
 
 /**/
@@ -241,6 +289,29 @@ footer .footer_redes ul li a img {
         margin: 10px 5px;
         font-size: 17px;
     }
+    .contenido .contenido_container section ul{
+        margin-left: 0;
+    }
+    .contenido .contenido_container section ul li{
+        margin: 3px 0px;
+        font-size: 17px;
+    }
+    .contenido .contenido_container section q{
+        margin: 5px auto;
+        width: 95%;
+        text-shadow: 0 0px 2px var(--beige-claro);
+        text-align: justify;
+        font-size: 18px;
+    }
+    .contenido .contenido_container section ol{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .contenido .contenido_container section ol li{
+        margin: 0 18px;
+        font-size: 17px;
+        text-shadow: 0 0 1px var(--white-amarillo);
+    }
 }
 /*Para tabletas (en modo vertical)*/
 @media screen and (min-width:768px) and (max-width: 991px){
@@ -249,6 +320,17 @@ footer .footer_redes ul li a img {
     }
     .contenido {
         width: 85%;
+    }
+    .contenido .contenido_container section q{
+        width: 90%;
+    }
+    .contenido .contenido_container section ol{
+        margin: 0 auto;
+        text-align: initial;
+        width: 85%;
+    }
+    .contenido .contenido_container section ul{
+        margin: 0 auto;
     }
 }
 /*Para tabletas (en modo horizontal)*/
