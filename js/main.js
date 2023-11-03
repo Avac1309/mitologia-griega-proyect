@@ -1,11 +1,19 @@
 const opciones = document.getElementById('opciones')
 const opcionesMenu = document.querySelector(".aside-de-opciones")
+const informacionAdicional = document.querySelector('.aside-de-informacion')
 
 opciones.addEventListener('click', abrirOpciones)
 
 function abrirOpciones () {
     console.log('Click menu')
     opcionesMenu.classList.toggle('inactive')
+}  
+
+//onclick del archivo Rituales.html
+function informacionExtra() {
+    console.log('Le diste click para ver infomaciuon extra')
+    informacionAdicional.classList.toggle('inactive')
+
 }
 
 // textarea

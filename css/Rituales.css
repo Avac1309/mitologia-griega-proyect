@@ -179,11 +179,49 @@ header nav aside .opciones-container a ul {
     text-align: justify;
 }
 
-.contenido .contenido_container section q{
+.contenido .contenido_container section p .click {
+    cursor: pointer;
+    border-bottom: 1px solid var(--amarillo-cafe);
+}
+.contenido .contenido_container section p b, .contenido .contenido_container .info ul li p span{
+    color: var(--amarillo-cafe);
+}
+
+/**/
+.contenido .contenido_container section article {
+    display: flex;
+    align-items: center;
+    height: 230px;
+    gap: 5%;
+    width: 80%;
+    margin: 35px auto;
+}
+.contenido .contenido_container section article div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+.contenido .contenido_container section article div img {
+    width: 100%;
+    height: 80%;
+}
+.contenido .contenido_container section article div p {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: initial;
+    font-family: math;
+    color: var(--cafe-palido);
+    font-weight: 700;
+    width: 100%;
+}
+.contenido .contenido_container section article q{
     color: #cabfaf;
-    margin: 20px auto;
+    margin: auto;
     font-size: 20px;
-    width: 70%;
+    width: 60%;
     text-align: inherit;
     display: block;
     border-left: 2px solid #f5deb33d;
@@ -191,6 +229,44 @@ header nav aside .opciones-container a ul {
     padding: 0 20px;
     text-shadow: 0 0px 5px var(--beige-claro);
 }
+.contenido .contenido_container .info .imagenes-de-ejemplo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    height: auto;
+    list-style: none;
+    margin: 30px auto 0;
+}
+.contenido .contenido_container .info ul li{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--marron-beige);
+    box-shadow: 0 0 5px var(--marron-beige);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.contenido .contenido_container .info  ul li div {
+    width: 20%;
+    height: 100%;
+}
+.contenido .contenido_container .info ul li div img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.contenido .contenido_container .info ul li p {
+    width: 80%;
+    padding: 10px;
+    font-size: unset;
+    font-weight: 700;
+}
+
 /**/
 footer {
     width: 100%;
@@ -260,6 +336,34 @@ footer .footer_redes ul li a img {
         text-align: justify;
         font-size: 18px;
     }
+
+    .contenido .contenido_container .info .imagenes-de-ejemplo {
+        width: 100%;
+    }
+    .contenido .contenido_container .info ul li{
+        gap: 0;
+    }
+    .contenido .contenido_container .info ul li p {
+        margin: 0;
+        font-weight: 100;
+        font-size: 70%;
+    }
+
+    /**/
+    .contenido .contenido_container section article {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .contenido .contenido_container section article div{
+        width: 70%;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    .contenido .contenido_container section article q {
+        width: 90%;
+        text-align: justify;
+    }
 }
 /*Para tabletas (en modo vertical)*/
 @media screen and (min-width:768px) and (max-width: 991px){
@@ -272,6 +376,30 @@ footer .footer_redes ul li a img {
     .contenido .contenido_container section q{
         width: 90%;
     }
+    .contenido .contenido_container .info .imagenes-de-ejemplo{
+        width: 90%;
+    }
+    .contenido .contenido_container .info ul li {
+        gap: 5px;
+    }
+    .contenido .contenido_container .info ul li p{
+        margin: 0;
+        font-size: smaller;
+    }
+    .contenido .contenido_container section article {
+        width: 100%;
+        height: 200px;
+        gap: 2%;
+    }
+    .contenido .contenido_container section article div {
+        height: 90%;
+        width: 30%;
+        margin: auto;
+    }
+    .contenido .contenido_container section article div p{
+        font-size: small;
+    }
+
 }
 /*Para tabletas (en modo horizontal)*/
 @media screen and (min-width: 992px) and (max-width: 1199px){
@@ -280,5 +408,19 @@ footer .footer_redes ul li a img {
     }
     .contenido {
         width: 80%;
+    }
+    .contenido .contenido_container .info .imagenes-de-ejemplo {
+        width: 90%;
+    }
+    .contenido .contenido_container .info ul li p {
+        margin: 0;
+        padding: 10px;
+    }
+    .contenido .contenido_container section article {
+        display: flex;
+        align-items: center;
+        height: 200px;
+        width: 90%;
+        margin: 35px auto;
     }
 }
