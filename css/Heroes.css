@@ -172,6 +172,30 @@ header nav aside .opciones-container a ul {
     background: linear-gradient(45deg, #c0a177, transparent);
 }
 
+.contenido .contenido_container .centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: 35px auto 0;
+}
+
+.contenido .contenido_container .centro img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 25px;
+}
+
+.contenido .contenido_container .centro span {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: initial;
+    font-family: math;
+    color: #d97d65;
+    font-weight: 700;
+    text-shadow: 0 0 15px #ca9863;
+}
 .contenido .contenido_container section p {
     color: #cabfaf;
     margin: 20px 10px;
@@ -266,6 +290,11 @@ footer .footer_redes ul li a img {
     .contenido .contenido_container ul li{
         margin: 0 10px;
     }
+
+    .contenido .contenido_container .centro{
+        width: 60%;
+        margin: 35px auto;
+    }
 }
 /*Para tabletas (en modo vertical)*/
 @media screen and (min-width:768px) and (max-width: 991px){
@@ -274,6 +303,9 @@ footer .footer_redes ul li a img {
     }
     .contenido {
         width: 85%;
+    }
+    .contenido .contenido_container .centro{
+        width: 60%;
     }
 }
 /*Para tabletas (en modo horizontal)*/
