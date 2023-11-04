@@ -2,21 +2,26 @@ const opciones = document.getElementById('opciones')
 const opcionesMenu = document.querySelector(".aside-de-opciones")
 const informacionAdicional = document.querySelector('.aside-de-informacion')
 
+
 opciones.addEventListener('click', abrirOpciones)
 
+//------------------Aparecer y desaparecer haciendo click contenedores de html
+
+//del nav ↓
 function abrirOpciones () {
     console.log('Click menu')
     opcionesMenu.classList.toggle('inactive')
 }  
 
-//onclick del archivo Rituales.html
+// del archivo rituaes.html ↓
 function informacionExtra() {
     console.log('Le diste click para ver infomaciuon extra')
     informacionAdicional.classList.toggle('inactive')
-
 }
+//----------------------------------------------------
 
-// textarea
+
+// Enviar los datos del formulario a mi correo html, en este caso, el textarea
 document.getElementById('miFormularioTextarea').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe normalmente
 
@@ -42,7 +47,7 @@ document.getElementById('miFormularioTextarea').addEventListener('submit', funct
     });
 });
 
-//html en js
+//---------------------------------------Escribiendo html en js del archivo contenidpo.html
 let imagesDeMuestra = [];
 imagesDeMuestra.push({
     img: 'https://i.pinimg.com/236x/62/84/32/62843263b5bff6c8b02f6f830fab94cc.jpg'
@@ -89,17 +94,17 @@ function srollImages() {
     const slider = document.querySelector('.slider');
 
     // Crea un único elemento <article>
-    const etiquetaArtcle = document.createElement('article');
-    etiquetaArtcle.classList.add('slider_contend');
+    const etiquetaArtcle = document.createElement('article');//crear etiqueta html 
+    etiquetaArtcle.classList.add('slider_contend'); //agregar una clase para que se vincule con el css
 
-    const titulo = document.createElement('h4')
-    titulo.innerText = 'Algunas Esculturas Realistas'
+    const titulo = document.createElement('h4') //crear etiqueta html 
+    titulo.innerText = 'Algunas Esculturas Realistas' //inyectar texto al html
 
-    for (const imagen of imagesDeMuestra) {
-        const divContenedor = document.createElement('div');
+    for (const imagen of imagesDeMuestra) { //creamos nuestras diversas imagenes
+        const divContenedor = document.createElement('div'); //crear etiqueta html
 
-        const etiquetaImg = document.createElement('img');
-        etiquetaImg.setAttribute('src', imagen.img);
+        const etiquetaImg = document.createElement('img'); //crear etiqueta html
+        etiquetaImg.setAttribute('src', imagen.img); //conectar con el array lo que se quiere mostrar
 
         // Agrega elementos al árbol DOM dentro del <article>
         divContenedor.appendChild(etiquetaImg);
@@ -113,3 +118,5 @@ function srollImages() {
 
 // Llama a la función srollImages después de que el DOM se haya cargado
 document.addEventListener('DOMContentLoaded', srollImages);
+//------------------------------------------------------
+
