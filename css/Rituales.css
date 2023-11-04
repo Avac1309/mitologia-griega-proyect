@@ -152,6 +152,23 @@ header nav aside .opciones-container a ul {
     text-shadow: 0 10px 3px var(--marron-chocolate);
     font-family: var(--font-family-elegante);
     margin: 30px 0;
+
+    /**/
+	animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}  
+@keyframes tracking-in-expand-fwd-top {
+        0% {
+            letter-spacing: -0.5em;
+            transform: translateZ(-700px) translateY(-500px);
+            opacity: 0;
+        }
+        40% {
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateZ(0) translateY(0);
+            opacity: 1;
+        }
 }
 
 .contenido .contenido_container {
@@ -164,6 +181,19 @@ header nav aside .opciones-container a ul {
     font-size: 50px;
     color: #b0a48d;
     margin: 0 20px;
+    overflow: hidden; /* Para ocultar el texto completo */
+    border-right:transparent; /* Efecto del cursor de la mÃ¡quina de escribir */
+    white-space: nowrap; /* Evitar el salto de lÃ­nea */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    animation: monoescrito 4s steps(18) infinite;
+}
+@keyframes monoescrito {
+    from {
+        width: 0;
+    }
+    to {
+        width: calc(1em * 10); /* Ancho total del texto (40 letras) */
+    }
 }
 
 .contenido .contenido_container section .separador {
@@ -186,7 +216,6 @@ header nav aside .opciones-container a ul {
 .contenido .contenido_container section p b, .contenido .contenido_container .info ul li p span{
     color: var(--amarillo-cafe);
 }
-
 /**/
 .contenido .contenido_container section article {
     display: flex;
@@ -229,6 +258,7 @@ header nav aside .opciones-container a ul {
     padding: 0 20px;
     text-shadow: 0 0px 5px var(--beige-claro);
 }
+/**/
 .contenido .contenido_container .info .imagenes-de-ejemplo{
     display: flex;
     flex-direction: column;
@@ -238,6 +268,7 @@ header nav aside .opciones-container a ul {
     list-style: none;
     margin: 30px auto 0;
 }
+
 .contenido .contenido_container .info ul li{
     display: flex;
     width: 100%;
@@ -249,6 +280,14 @@ header nav aside .opciones-container a ul {
     box-shadow: 0 0 5px var(--marron-beige);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.contenido .contenido_container .info ul li:hover{
+        transform: scale(1, 1.1);
+}
+ul:hover > li:not(:hover) {
+    filter: blur(5px);
+    transform: scale(0.9, 0.9);
 }
 
 .contenido .contenido_container .info  ul li div {
