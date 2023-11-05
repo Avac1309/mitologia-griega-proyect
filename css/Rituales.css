@@ -181,19 +181,6 @@ header nav aside .opciones-container a ul {
     font-size: 50px;
     color: #b0a48d;
     margin: 0 20px;
-    overflow: hidden; /* Para ocultar el texto completo */
-    border-right:transparent; /* Efecto del cursor de la mÃ¡quina de escribir */
-    white-space: nowrap; /* Evitar el salto de lÃ­nea */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    animation: monoescrito 4s steps(18) infinite;
-}
-@keyframes monoescrito {
-    from {
-        width: 0;
-    }
-    to {
-        width: calc(1em * 10); /* Ancho total del texto (40 letras) */
-    }
 }
 
 .contenido .contenido_container section .separador {
@@ -258,6 +245,7 @@ header nav aside .opciones-container a ul {
     padding: 0 20px;
     text-shadow: 0 0px 5px var(--beige-claro);
 }
+
 /**/
 .contenido .contenido_container .info .imagenes-de-ejemplo{
     display: flex;

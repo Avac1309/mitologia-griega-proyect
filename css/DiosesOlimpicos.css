@@ -183,19 +183,6 @@ header nav aside .opciones-container a ul {
     font-size: 50px;
     color: #b0a48d;
     margin: 0 20px;
-    overflow: hidden; /* Para ocultar el texto completo */
-    border-right:transparent; /* Efecto del cursor de la mÃ¡quina de escribir */
-    white-space: nowrap; /* Evitar el salto de lÃ­nea */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    animation: monoescrito 4s steps(18) infinite;
-}
-@keyframes monoescrito {
-    from {
-        width: 0;
-    }
-    to {
-        width: calc(1em * 10); /* Ancho total del texto (40 letras) */
-    }
 }
 
 .contenido .contenido_container section .separador {
@@ -224,8 +211,20 @@ header nav aside .opciones-container a ul {
 .contenido .contenido_container .informacion-actual img {
     width: 90%;
     margin: 0 auto;
-}
 
+    
+    animation: fade-in-fwd 4.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite;
+}
+@keyframes fade-in-fwd {
+    0% {
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
 /**/
 .contenido .contenido_container section .slider {
     width: 100%;
@@ -280,6 +279,7 @@ header nav aside .opciones-container a ul {
     height: 100%;
     object-fit: cover;
 }
+
 
 .contenido .contenido_container .slider .slider_contend article aside div {
     position: absolute;
