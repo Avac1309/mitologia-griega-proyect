@@ -152,8 +152,24 @@ header nav aside .opciones-container a ul {
     text-shadow: 0 10px 3px var(--marron-chocolate);
     font-family: var(--font-family-elegante);
     margin: 30px 0;
-}
 
+    /**/
+	animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}  
+@keyframes tracking-in-expand-fwd-top {
+        0% {
+            letter-spacing: -0.5em;
+            transform: translateZ(-700px) translateY(-500px);
+            opacity: 0;
+        }
+        40% {
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateZ(0) translateY(0);
+            opacity: 1;
+        }
+}
 .contenido .contenido_container {
     display: flex;
     flex-direction: column;
@@ -185,7 +201,40 @@ header nav aside .opciones-container a ul {
     height: auto;
     object-fit: contain;
     border-radius: 25px;
+    /**/
+    animation: titileo 2s linear infinite both;
 }
+@keyframes titileo{
+    0%,
+    100% {
+        opacity: 1;
+    }
+    41.99% {
+        opacity: 1;
+    }
+    42% {
+        opacity: 0;
+    }
+    43% {
+        opacity: 0;
+    }
+    43.01% {
+        opacity: 1;
+    }
+    47.99% {
+        opacity: 1;
+    }
+    48% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    49.01% {
+        opacity: 1;
+    }
+}
+
 
 .contenido .contenido_container .centro span {
     margin: 10px 0 0;
@@ -195,7 +244,22 @@ header nav aside .opciones-container a ul {
     color: #d97d65;
     font-weight: 700;
     text-shadow: 0 0 15px #ca9863;
+    /**/
+    overflow: hidden; /* Para ocultar el texto completo */
+    border-right:transparent; /* Efecto del cursor de la mÃ¡quina de escribir */
+    white-space: nowrap;  /*Evitar el salto de lÃ­nea */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    animation: monoescrito 10s steps(62) 8s infinite;
 }
+@keyframes monoescrito {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%; /* Ancho total del texto (40 letras) */
+    }
+}
+
 .contenido .contenido_container section p {
     color: #cabfaf;
     margin: 20px 10px;
@@ -219,7 +283,64 @@ header nav aside .opciones-container a ul {
     list-style-position: inside;
 }
 
+/***/
+.contenido .contenido_container section:nth-child(4){
+    height: auto;
+    margin-bottom: 80px;
+}
+.contenido .contenido_container section .heroes-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido .contenido_container section .heroes-4 h3{
+    font-size: 40px;
+    color: #b0a48d;
+    margin: 30px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--cafe-palido);
+}
+.contenido .contenido_container section section article {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    height: auto;
+}
+.contenido .contenido_container section section article  div{
+    width: 300px;
+    height: 300px;
+}
+.contenido .contenido_container section section article  div img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    /**/
+    animation: swing-in-top-fwd 10.5s ease-in-out infinite;
+}
+@keyframes swing-in-top-fwd {
+    0% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+}
 
+.contenido .contenido_container section section article div p {
+    margin: 10px 5px;
+}
+.contenido .contenido_container section section article  div p span {
+    color: #f5a56d;
+    text-shadow: 0 0 20px #f1e3d9;
+    font-weight: 600;
+    font-family: auto;
+}
 /**/
 footer {
     width: 100%;
@@ -292,8 +413,16 @@ footer .footer_redes ul li a img {
     }
 
     .contenido .contenido_container .centro{
-        width: 60%;
+        width: 70%;
         margin: 35px auto;
+    }
+    /**/
+    .contenido .contenido_container section section article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 150px;display: flex;
+        flex-direction: column;
     }
 }
 /*Para tabletas (en modo vertical)*/
@@ -307,7 +436,37 @@ footer .footer_redes ul li a img {
     .contenido .contenido_container .centro{
         width: 60%;
     }
+    /**/
+    .contenido .contenido_container section section article {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 2%;
+        row-gap: 30%;
+    }
+    .contenido .contenido_container section section article  div:nth-child(1){
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .contenido .contenido_container section section article  div:nth-child(2){
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .contenido .contenido_container section section article  div:nth-child(3){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .contenido .contenido_container section section article  div:nth-child(4){
+        grid-column: 2;
+        grid-row: 2;
+    }
+    /**/
+    footer {
+        margin-top: 200px;
+    }
 }
+
 /*Para tabletas (en modo horizontal)*/
 @media screen and (min-width: 992px) and (max-width: 1199px){
     header nav aside .opciones-container {
@@ -315,5 +474,34 @@ footer .footer_redes ul li a img {
     }
     .contenido {
         width: 80%;
+    }
+    /**/
+    .contenido .contenido_container section section article {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 2%;
+        row-gap: 30%;
+    }
+    .contenido .contenido_container section section article  div:nth-child(1){
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .contenido .contenido_container section section article  div:nth-child(2){
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .contenido .contenido_container section section article  div:nth-child(3){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .contenido .contenido_container section section article  div:nth-child(4){
+        grid-column: 2;
+        grid-row: 2;
+    }
+    /**/
+    footer {
+        margin-top: 200px;
     }
 }
