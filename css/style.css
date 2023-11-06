@@ -191,11 +191,8 @@ header .navbar {
     transition: transform 0.5s cubic-bezier(0.4, 0, 1, 1);
 }
 
-#link{
-    text-decoration: none;
-}
 /*Animaciones al boton*/
-#button:hover, #link:hover{
+#button:hover{
     box-shadow: 0 10px 20px var(--marron-beige);
     background: linear-gradient(135deg,#cebc9b,#7A664B );
     transform: translateY(-10%) scale(1.1);

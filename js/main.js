@@ -1,17 +1,23 @@
 const opciones = document.getElementById('opciones')
 const opcionesMenu = document.querySelector(".aside-de-opciones")
 const informacionAdicional = document.querySelector('.aside-de-informacion')
+const closedOpciones = document.querySelector('.closed-opciones')
 
 
 opciones.addEventListener('click', abrirOpciones)
+closedOpciones.addEventListener('click', cerrarOpciones)
 
 //------------------Aparecer y desaparecer haciendo click contenedores de html
 
 //del nav ↓
 function abrirOpciones () {
-    console.log('Click menu')
-    opcionesMenu.classList.toggle('inactive')
+    console.log('Abriste el menu')
+    opcionesMenu.classList.remove('inactive')
 }  
+function cerrarOpciones() {
+    console.log('Cerraste el menu')
+    opcionesMenu.classList.add('inactive')
+}
 
 // del archivo rituaes.html ↓
 function informacionExtra() {

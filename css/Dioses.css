@@ -87,11 +87,15 @@ header nav div #retrosede{
 } 
 
 /*menu de opciones*/
-header nav .aside-de-opciones {
-    position: absolute; /*por que?*/
+header nav aside {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #37281969;
 }
-
-
 header nav aside .opciones-container {
     background-color: var(--marron-beige);
     width: 25%;
@@ -99,11 +103,23 @@ header nav aside .opciones-container {
     height: auto;
     position: fixed;
     right: 0;
-    margin: 10px 90px 5px 0px;
+    margin: 110px 90px 5px 0px;
     z-index: 3;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+}
+header nav aside .opciones-container .closed-opciones {
+    color: var(--white);
+    background-color: var(--marron-chocolate);
+    border-radius: 5px;
+    margin: 5px 20px;
+    font-weight: bolder;
+    padding: 5px 8px; 
+    cursor: pointer;
+    right: 10px;
+    position: fixed;
+    font-size: xx-large;
 }
 
 header nav  aside .opciones-container a {
@@ -331,6 +347,13 @@ footer .footer_redes ul li a img {
     }
     header nav .contenedor-titulo{
         display: none;
+    }
+    header nav aside .opciones-container .closed-opciones {
+        position: relative;
+        font-size: xx-large;
+        width: 20%;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .contenido {
