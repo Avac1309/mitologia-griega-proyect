@@ -28,29 +28,27 @@ function informacionExtra() {
 
 
 // Enviar los datos del formulario a mi correo html, en este caso, el textarea
+// Agrega un evento de escucha al formulario con ID 'miFormularioTextarea' para el evento de envío (submit)
 document.getElementById('miFormularioTextarea').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe normalmente
 
-    // Obtén los datos del formulario
+    // Obtén los datos del formulario y crea un objeto FormData
     const formData = new FormData(this);
 
     // Enviar datos a FormSubmit usando fetch
     fetch('https://formspree.io/f/xwkdyzqj', {
-        method: 'POST',
-        body: formData
+        method: 'POST', // Realiza una solicitud POST
+        body: formData // Incluye los datos del formulario en el cuerpo de la solicitud
     })
-    .then(response => {
-        // Verifica el código de estado de la respuesta
-        if (response.status === 200) {
-            alert('¡Formulario enviado con éxito!');
-        } else {
-            alert('Error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
-        }
-    })
-    .catch(error => {
-        console.error(error);
-        alert('Error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
-    });
+
+    let comentario = document.getElementById('comentario').value
+
+    if (comentario === ''){
+        alert('Tienes que escribir algo.')
+    } else {
+        alert('Se envio con exito, gracias.')
+        console.log('El comentario que escribistes e enviastes fue → ' + comentario)
+    }
 });
 
 //---------------------------------------Escribiendo html en js del archivo contenidpo.html

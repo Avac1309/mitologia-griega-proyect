@@ -47,13 +47,15 @@
             <form action="./page/contenido.html" method="GET" > <!--https://formspree.io/f/xknlkblyA traves de ese link valido, me llegarn mensajes a mi gmail personal de la página donde estaran los datos que los usuarios pusieron en el formulario-->
 
                 <label for="individuo" name="nombre">Username</label> <br>
-                <input type="text" id="individuo" name="Usuario"> <br>
+                <input type="text" id="individuo" name="Usuario" required> <br>
 
                 <label for="email" name="gmail">E-mail</label> <br>
-                <input type="email" id="email" name="Email"> <br>
+                <input type="email" id="email" name="Email" required> <br>
+
                 <label for="digitos" name="contraseña">Password</label> <br>
-                <input type="password" id="digitos" name="Contraseña"> <br>
-                <p>Al darle "Enviar" aceptar los <a href="https://policies.google.com/terms?hl=es">Terminos de servicios</a> y la <a href="https://policies.google.com/privacy?hl=es">Politica de privacidad</a> de la pagina web, incluida la politica de <a href="https://policies.google.com/technologies/cookies?hl=es">Uso de Cookies</a>.</p> <br>  <!-- Parrafo de terminos y conddiciones sobre la página -->
+                <input type="password" id="digitos" name="Contraseña" required> <br>
+
+                <p>Al darle "Enviar" aceptar los <a href="https://policies.google.com/terms?hl=es">Terminos de servicios</a> y la <a href="https://policies.google.com/privacy?hl=es">Politica de privacidad</a> de la pagina web, incluida la politica de <a href="https://policies.google.com/technologies/cookies?hl=es">Uso de Cookies</a>.</p><br>  <!-- Parrafo de terminos y conddiciones sobre la página -->
 
                 <input type="submit" value="Enviar" class="button" id="button">
             </form>
