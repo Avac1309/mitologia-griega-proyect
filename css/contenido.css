@@ -79,17 +79,17 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
 }
-.principal aside .opciones-container .closed-opciones {
+.principal nav aside .opciones-container .closed-opciones {
     color: var(--white);
     background-color: var(--marron-chocolate);
     border-radius: 5px;
-    font-size: smaller;
-    position: absolute;
     margin: 5px 20px;
     font-weight: bolder;
-    right: 5px;
     padding: 5px 8px; 
     cursor: pointer;
+    right: 10px;
+    position: fixed;
+    font-size: xx-large;
 }
 .principal aside .opciones-container a {
     color: var(--white);
@@ -191,7 +191,7 @@ body::-webkit-scrollbar{
     flex-direction: column;
     align-items: center;
     /**/
-    animation: shadow-div 4.3s ease-in-out both;
+    animation: shadow-div 4.3s linear both;
 }
 @keyframes shadow-div {
     0% {
@@ -213,6 +213,12 @@ body::-webkit-scrollbar{
     color: var(--beige-claro);
     font-size: 30px;
     text-align: center;
+    margin: auto;
+}
+.secundary .cards-flouters div a:hover {
+    text-shadow: 0 8px 8px var(--marron-beige);
+    transform: translateY(-10%) scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .secundary .contend {
@@ -231,7 +237,7 @@ body::-webkit-scrollbar{
     grid-column: 1;
     grid-row: 1;
     width: 100%;
-    background-image: url(https://i.pinimg.com/564x/0a/d7/bd/0ad7bdd280da505eb858f8aff1338ee3.jpg);
+    background-image: url('../img/templo-griego.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -565,7 +571,15 @@ footer article p {
     .principal .introduction .contenedor-texto p {
         color: var(--white);
     }
-
+    /**/
+    .principal nav aside .opciones-container .closed-opciones {
+        position: relative;
+        font-size: xx-large;
+        width: 20%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    /**/
     .secundary .cards-flouters{
         gap: 20px;
     }

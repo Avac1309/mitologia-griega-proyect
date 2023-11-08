@@ -19,6 +19,7 @@ html, body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+    height: 100%;
     background-color: var(--marron-cafe);
 }
 body::-webkit-scrollbar{
@@ -54,7 +55,6 @@ header nav .contenedor-titulo h1 {
     font-size: 30px;
     text-align: center;
 }
-
 header nav .contenedor-titulo h1 span {
     font-family: var(--font-family-cursive);
     font-size: 40px;
@@ -142,7 +142,6 @@ header nav aside .opciones-container a ul {
     margin: 0 0 0 60px;
     list-style: circle;
 }
-
 /*-----------------------------------------------------------------------------*/
 .contenido {
     margin: 80px auto;
@@ -160,7 +159,7 @@ header nav aside .opciones-container a ul {
 
     /**/
 	animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}  
+}
 @keyframes tracking-in-expand-fwd-top {
         0% {
             letter-spacing: -0.5em;
@@ -175,8 +174,12 @@ header nav aside .opciones-container a ul {
             opacity: 1;
         }
 }
-
-
+.contenido  p{
+    color: #cabfaf;
+    margin: 20px 10px;
+    font-size: 20px;
+    text-align: justify;
+}
 .contenido .contenido_container {
     display: flex;
     flex-direction: column;
@@ -193,124 +196,103 @@ header nav aside .opciones-container a ul {
     width: 80%;
     height: 3px;
     background: linear-gradient(45deg, #c0a177, transparent);
+    margin: 5px 0;
 }
 
-.contenido .contenido_container section p{
+.contenido .contenido_container section .container-informacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 100px;
+    grid-template-areas: 'p1 img' 'p2 p2';
+    align-items: center;
+}
+.contenido .contenido_container section p {
     color: #cabfaf;
     margin: 20px 10px;
     font-size: 20px;
     text-align: justify;
 }
-.contenido .contenido_container section .introduccion {
+
+/**/
+.contenido .contenido_container section .teatro-Epidauro  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    gap: 2%;
+    align-items: center;
+    margin: 20px 0;
     text-align: justify;
 }
-
-.contenido .contenido_container .informacion-actual  {
-    display: flex;
-    flex-direction: column;
-}
-.contenido .contenido_container .informacion-actual img {
+.contenido .contenido_container section .teatro-Epidauro q {
+    grid-column: 1;
+    color: #cabfaf;
+    margin: auto;
+    font-size: 20px;
     width: 90%;
-    margin: 0 auto;
-
-    
-    animation: fade-in-fwd 4.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite;
+    text-align: inherit;
+    display: block;
+    border-left: 2px solid #f5deb33d;
+    border-radius: 8px;
+    padding: 0 20px;
+    text-shadow: 0 0px 5px var(--beige-claro);
 }
-@keyframes fade-in-fwd {
+.contenido .contenido_container section .teatro-Epidauro img  {
+    grid-column: 2;
+    border-radius:25px ;
+    width: 100%;
+    height: 100%;
+    /**/
+    animation: titileo-con-desenfoque 3.9s infinite both;
+}
+@keyframes titileo-con-desenfoque {
     0% {
-        transform: translateZ(-80px);
-        opacity: 0;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+        filter: blur(1px);
     }
     100% {
-        transform: translateZ(0);
         opacity: 1;
     }
 }
-/**/
-.contenido .contenido_container section .slider {
-    width: 100%;
-    margin: 60px 0;
+.contenido .contenido_container section .el-olimpo{
     display: flex;
+    height: 215px;
+    width: 95%;
+    gap: 2%;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    margin: 40px auto;
+    text-align: justify;
 }
-
-.contenido .contenido_container section .slider .slider_contend {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: both;
-    display: flex;
-    gap: 4%;
-    padding-bottom: 1rem;
-    width: 90%;
-    height: 80%;
-
-    position: relative;
-}
-.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar{
-    width: 25%;
-}
-.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar-track{
-    background-color: #b0a48d78;
-    border-radius: 20px;
-}
-.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar-thumb{
-    background-color: var(--white);
-    border-radius: 20px;
-}
-
-.contenido .contenido_container section .slider .slider_contend article {
-    scroll-snap-align: start;
-    display: flex;
-    border-radius: 0.25rem;
-    height: 500px;
-}
-
-.contenido .contenido_container .slider .slider_contend article aside {   
-    height: 100%;
-    width: 300px;
-}
-
-
-.contenido .contenido_container .slider .slider_contend article aside img {
-    object-fit: cover;
-    border-radius: 10px;
+.contenido .contenido_container section .el-olimpo p{
     width: 100%;
+    color: #cabfaf;
+    margin: 20px 10px;
+    font-size: 20px;
+    text-align: justify;
+    margin: 0 10px;
+}
+.contenido .contenido_container section p span {
+    color: var(--amarillo-cafe);
+}
+.contenido .contenido_container section .el-olimpo img{
+    width: 80%;
     height: 100%;
-    object-fit: cover;
+    object-fit: revert;
+    box-shadow:-5px 5px 30px var(--cafe-palido);
+    border-radius: 20px;
 }
-
-
-.contenido .contenido_container .slider .slider_contend article aside div {
-    position: absolute;
-    bottom: -100%;
-    left: auto;
-    height: 80%;
-    width: 300px;
-    /* background-color: #372819a8; */
-    background-color: #352719b0;
-    box-shadow: inset 0 0 12px #4d3e30;
-    padding: 20px;
-    transition: 0.3s ease;
-    box-sizing: border-box;
+.contenido .contenido_container section .el-olimpo img:hover {
+    animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
-
-.contenido .contenido_container .slider .slider_contend article:hover div {
-    bottom: 0; /* Muestra el contenido desplegable cuando el cursor está encima del contenedor */
-    margin-bottom: 15px;
-    border-radius: 10px;
-}
-
-.contenido .contenido_container .slider .slider_contend article aside div h3 {
-    font-family: math;
-    color: var(--white);
-    font-size: xx-large;
-    text-align: center;
-    text-shadow: 0 6px 5px var(--marron-cafe);
-}
-.contenido .contenido_container .slider .slider_contend article aside div p{
-    color: #f4d2a2;
+@keyframes flip-vertical-fwd {
+    0% {
+        transform: translateZ(0) rotateY(0);
+    }
+    100% {
+        transform: translateZ(160px) rotateY(180deg);
+    }
 }
 /**/
 footer {
@@ -319,6 +301,8 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 8px 0;
+    position: relative;
+    bottom: 0;
     background-color: var(--marron-chocolate);
 }
 
@@ -366,10 +350,13 @@ footer .footer_redes ul li a img {
         width: 90%;
     }
     .contenido h1 {
-        font-size: 60px;
+        font-size: 50px;
         margin: 20px 0;
     }
-
+    .contenido h1 p {
+        margin: 10px 5px 55px;
+        font-size: 17px;
+    }
     .contenido .contenido_container section h2 {
         font-size: 37px;
         margin: 0 15px;
@@ -381,12 +368,41 @@ footer .footer_redes ul li a img {
         margin: 10px 5px;
         font-size: 17px;
     }
-
-    .contenido .contenido_container section .slider{
-        position: relative;
+    /***/
+    .contenido .contenido_container section .teatro-Epidauro {
+        height: auto;
+        gap: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95%;
+        margin: auto;
     }
-    .contenido .contenido_container section .slider .slider_contend{
+    .contenido .contenido_container section .teatro-Epidauro q{
+        font-size: 18px;
+        width: 100%;
+        margin: 30px 0 0;
+    }
+    .contenido .contenido_container section .teatro-Epidauro img{
+        height: 250px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    /**/
+    .contenido .contenido_container section .el-olimpo {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 20px auto;
+    }
+    .contenido .contenido_container section .el-olimpo img {
         width: 80%;
+        height: 200px;
+        margin: 20px 0;
+        box-shadow: 0 8px 30px var(--cafe-palido);
+    }
+    .contenido .contenido_container section .el-olimpo p {
+        margin: 10px 5px;
+        font-size: 17px;
     }
 }
 /*Para tabletas (en modo vertical)*/
@@ -397,19 +413,57 @@ footer .footer_redes ul li a img {
     .contenido {
         width: 85%;
     }
-    .contenido .contenido_container section .slider .slider_contend{
-        width: 90%;
+    /***/
+    .contenido .contenido_container section .teatro-Epidauro {
+        height: auto;
+        gap: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: auto;
+    }
+    .contenido .contenido_container section .teatro-Epidauro q{
+        font-size: 18px;
+        width: 100%;
+        margin: 30px 0 0;
+    }
+    .contenido .contenido_container section .teatro-Epidauro img{
+        height: 250px;
+        width: 500px;
+    }
+    /**/
+    .contenido .contenido_container section .el-olimpo {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 20px auto;
+    }
+    .contenido .contenido_container section .el-olimpo img {
+        width: 80%;
+        height: 200px;
+        margin: 20px 0;
+        box-shadow: 0 8px 30px var(--cafe-palido);
     }
 }
 /*Para tabletas (en modo horizontal)*/
 @media screen and (min-width: 992px) and (max-width: 1199px){
     header nav aside .opciones-container {
-    width: 40%;
+        width: 40%;
     }
     .contenido {
         width: 80%;
     }
-    .contenido .contenido_container section .slider .slider_contend{
-        width: 85%;
+    /**/
+    .contenido .contenido_container section .teatro-Epidauro  {
+        grid-template-rows: 400px;
+        gap: 0%;
+    }
+    .contenido .contenido_container section .teatro-Epidauro q {
+        font-size: 18px;
+        width: 90%;
+    }
+    /**/
+    .contenido .contenido_container section .el-olimpo {
+        height: 300px;
     }
 }
