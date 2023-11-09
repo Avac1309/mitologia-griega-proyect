@@ -282,18 +282,20 @@ header nav aside .opciones-container a ul {
     object-fit: revert;
     box-shadow:-5px 5px 30px var(--cafe-palido);
     border-radius: 20px;
+    /**/
+    animation:zoom-stop 5s ease-out 2s infinite backwards;
 }
-.contenido .contenido_container section .el-olimpo img:hover {
-    animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
-@keyframes flip-vertical-fwd {
+@keyframes zoom-stop{
     0% {
-        transform: translateZ(0) rotateY(0);
+        transform: scale(1) translateY(0);
+        transform-origin: 50% 16%;
     }
     100% {
-        transform: translateZ(160px) rotateY(180deg);
+        transform: scale(1.08) translateY(-5px);
+        transform-origin: top;
     }
 }
+
 /**/
 footer {
     width: 100%;
