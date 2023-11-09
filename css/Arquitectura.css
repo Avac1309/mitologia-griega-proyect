@@ -20,13 +20,21 @@ html, body {
     width: 100%;
     height: 100%;
     height: 100%;
-    background-color: var(--marron-cafe);
+    /* background-color: var(--marron-cafe); */
 }
 body::-webkit-scrollbar{
     display: none;
 }
 .inactive {
     display: none;
+}
+
+body #fondo {
+    background-image: url('../img/preview.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
 }
 
 /*Estilos al navbar (encabezado)*/
@@ -146,10 +154,13 @@ header nav aside .opciones-container a ul {
 .contenido {
     margin: 80px auto;
     width: 70%;
+    background: #4336299c;
+    border-radius: 15px;
+    padding: 0 60px;
 }
 
 .contenido h1 {
-    color: var(--cafe-palido);
+    color: #dbbb8e;
     text-align: center;
     font-size: 90px;
     font-weight: 400;
@@ -188,7 +199,7 @@ header nav aside .opciones-container a ul {
 
 .contenido .contenido_container section h2{
     font-size: 50px;
-    color: #b0a48d;
+    color: #ddc699;
     margin: 0 20px;
 }
 
@@ -207,7 +218,7 @@ header nav aside .opciones-container a ul {
     align-items: center;
 }
 .contenido .contenido_container section p {
-    color: #cabfaf;
+    color: #f7e5ca;
     margin: 20px 10px;
     font-size: 20px;
     text-align: justify;
@@ -350,6 +361,7 @@ footer .footer_redes ul li a img {
     .contenido {
         margin: 40px auto;
         width: 90%;
+        padding: 0 10px;
     }
     .contenido h1 {
         font-size: 50px;
@@ -414,6 +426,7 @@ footer .footer_redes ul li a img {
     }
     .contenido {
         width: 85%;
+        padding: 0 25px;
     }
     /***/
     .contenido .contenido_container section .teatro-Epidauro {
