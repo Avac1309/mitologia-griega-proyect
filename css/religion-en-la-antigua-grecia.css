@@ -34,14 +34,14 @@ main  nav {
 }
 main  nav a{
     color: var(--white);
-    font-weight: 700;
+    font-weight: 900;
     font-size: 22px;
     font-family: auto;
     border: 1px solid;
     border-radius: 5px;
     padding: 6px 12px;
     cursor: pointer;
-    background-color: #f5deb300;
+    background-color: var(--marron-beige);
     margin: auto 30px;
 }
 
@@ -138,6 +138,7 @@ main  nav a{
     width: 90%;
     box-shadow: 0 10px 10px var(--cafe-palido);
     margin: auto;
+    border-radius: 10px;
 }
 
 /**/
@@ -179,4 +180,90 @@ footer .footer_redes .redes-sociales {
 
 footer .footer_redes ul li a img {
     margin: 4px 20px;
+}
+
+
+/*---------------------------------MEDIAS QUERIES----------------------------*/
+/*las medidas de losmedias queries son las mismas que utilice para el index.html*/
+/*Para telefonos moviles (portatil)*/
+@media screen and (min-width:360px) and (max-width:767px){
+    .principal div h1 {
+        font-size: 68px;
+    }
+    .contenido_container{
+        width: 90%;
+    }
+    .contenido_container section .contenedores-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido_container section .contenedores-info img {
+        height: 90%;
+        object-fit: cover;
+        margin: 0 auto 15px;
+    }
+    .contenido_container section:nth-child(2) {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido_container section:nth-child(2) div:nth-child(2) h2 {
+        width: 70%;
+    }
+    .contenido_container section h2 {
+        font-size: 30px;
+    }
+    .contenido_container section p{
+        font-size: 16px;
+    }
+}
+/*Para tabletas (en modo vertical)*/
+@media screen and (min-width:768px) and (max-width: 991px){
+    .principal div h1 {
+        font-size: 70px;
+    }
+    .contenido_container{
+        width: 90%;
+    }
+    .contenido_container section .contenedores-info {
+        grid-template-areas: 'parrafo1 parrafo1 parrafo1'
+                            'parrafo2 parrafo2 imagen'
+                            'parrafo3 parrafo3 imagen'
+                            'parrafo4 parrafo4 parrafo4';
+    }
+    .contenido_container section .contenedores-info img {
+        height: 90%;
+        object-fit: cover;
+    }
+    .contenido_container section:nth-child(2) {
+        width: 85%;
+    }
+    .contenido_container section h2 {
+        font-size: 35px;
+    }
+    .contenido_container section p{
+        font-size: 18px;
+    }
+}
+/*Para tabletas (en modo horizontal)*/
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .contenido_container{
+        width: 80%;
+    }
+    .contenido_container section .contenedores-info {
+        grid-template-areas: 'parrafo1 parrafo1 parrafo1'
+                            'parrafo2 parrafo2 imagen'
+                            'parrafo3 parrafo3 imagen'
+                            'parrafo4 parrafo4 parrafo4';
+    }
+    .contenido_container section .contenedores-info img {
+        height: 90%;
+        object-fit: cover;
+    }
+    .contenido_container section:nth-child(2) {
+        width: 80%;
+    }
+    .contenido_container section h2 {
+        font-size: 40px;
+    }
 }
