@@ -146,6 +146,7 @@ main  nav a{
 }
 .contenido_container section:nth-child(1) ol li span {  
     font-size: 23px;
+    font-weight: 900;
     text-shadow: 0 6px 3px var(--marron-chocolate);
 }
 .contenido_container section:nth-child(1) ol li ul{
@@ -203,6 +204,7 @@ main  nav a{
 .contenido_container section:nth-child(3) img {
     width: 60%;
     margin-bottom: 30px;
+    border-radius: 15px;
 }
 
 .contenido_container section:nth-child(3) aside{
@@ -300,28 +302,45 @@ footer .footer_redes ul li a img {
     .contenido_container{
         width: 90%;
     }
-    .contenido_container section .contenedores-info {
-        display: flex;
-        flex-direction: column;
-    }
-    .contenido_container section .contenedores-info img {
-        height: 90%;
-        object-fit: cover;
-        margin: 0 auto 15px;
-    }
-    .contenido_container section:nth-child(2) {
-        width: 85%;
-        display: flex;
-        flex-direction: column;
-    }
-    .contenido_container section:nth-child(2) div:nth-child(2) h2 {
-        width: 70%;
-    }
     .contenido_container section h2 {
         font-size: 30px;
     }
     .contenido_container section p{
         font-size: 16px;
+    }
+    .contenido_container section:nth-child(1) ol {
+        width: 80%;
+    }
+    .contenido_container section:nth-child(2) {
+        margin: auto;
+        width: 95%;
+        padding:15px 0 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido_container section:nth-child(2) aside{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .contenido_container section:nth-child(2) aside div{
+        margin-bottom: 30px;
+    }
+    .contenido_container section:nth-child(2) aside h3 {
+        font-size: 25px;
+        padding-top: 5px;
+    }
+    .contenido_container section:nth-child(2) aside p {
+        font-size: 16px;
+    }
+    .contenido_container section:nth-child(3) aside{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .contenido_container section:nth-child(3) img{
+        width: 90%;
+        margin: 0;
     }
 }
 /*Para tabletas (en modo vertical)*/
@@ -332,24 +351,34 @@ footer .footer_redes ul li a img {
     .contenido_container{
         width: 90%;
     }
-    .contenido_container section .contenedores-info {
-        grid-template-areas: 'parrafo1 parrafo1 parrafo1'
-                            'parrafo2 parrafo2 imagen'
-                            'parrafo3 parrafo3 imagen'
-                            'parrafo4 parrafo4 parrafo4';
-    }
-    .contenido_container section .contenedores-info img {
-        height: 90%;
-        object-fit: cover;
-    }
-    .contenido_container section:nth-child(2) {
-        width: 85%;
-    }
     .contenido_container section h2 {
         font-size: 35px;
     }
     .contenido_container section p{
         font-size: 18px;
+    }
+    .contenido_container section:nth-child(2) {
+        width: 95%;
+        margin: auto;
+    }
+    .contenido_container section:nth-child(2) aside{
+        width: 95%;
+        padding-bottom: 15%;
+    }
+    .contenido_container section:nth-child(2) aside h3 {
+        font-size: 25px;
+        padding-top: 5px;
+    }
+    .contenido_container section:nth-child(2) aside p {
+        font-size: 16px;
+    }
+    .contenido_container section:nth-child(3) aside{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .contenido_container section:nth-child(3) img{
+        width: 80%;
     }
 }
 /*Para tabletas (en modo horizontal)*/
@@ -357,20 +386,23 @@ footer .footer_redes ul li a img {
     .contenido_container{
         width: 80%;
     }
-    .contenido_container section .contenedores-info {
-        grid-template-areas: 'parrafo1 parrafo1 parrafo1'
-                            'parrafo2 parrafo2 imagen'
-                            'parrafo3 parrafo3 imagen'
-                            'parrafo4 parrafo4 parrafo4';
-    }
-    .contenido_container section .contenedores-info img {
-        height: 90%;
-        object-fit: cover;
-    }
-    .contenido_container section:nth-child(2) {
-        width: 80%;
-    }
     .contenido_container section h2 {
         font-size: 40px;
+    }
+    .contenido_container section:nth-child(2) {
+        width: 95%;
+        margin: auto;
+    }
+    .contenido_container section:nth-child(2) aside {
+        width: 90%;
+        padding-bottom: 15%;
+    }
+    .contenido_container section:nth-child(3) aside{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .contenido_container section:nth-child(3) img{
+        width: 80%;
     }
 }
