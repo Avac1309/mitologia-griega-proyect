@@ -303,7 +303,7 @@ footer .footer_redes ul li a img {
     .contenido_container section:hover {
         box-shadow: 0 8px 12px #f5c37d61;
         transform: none;
-        transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
+        transition: none;
     }
     .contenido_container section h2 {
         font-size: 30px;
