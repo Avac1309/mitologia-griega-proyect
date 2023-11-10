@@ -59,6 +59,7 @@ main  nav a{
     border-bottom-left-radius: 45px;
     border-bottom-right-radius: 45px;
 }
+
 .principal div {
     padding: 15px;
     width: 100%;
@@ -75,8 +76,22 @@ main  nav a{
     font-family: var(--font-family-cursive);
     color: var(--white-amarillo);
     text-align: center;
-    text-shadow: 0 8px 8px var(--marron-chocolate);
+    /**/
+    animation: tittle-up-top 1.5s ease-in forwards;
 }
+@keyframes tittle-up-top {
+    0% {
+        transform: translateY(0);
+        transform-origin: 50% 50%;
+        text-shadow: none;
+    }
+    100% {
+        transform: translateY(-50px);
+        transform-origin: 50% 50%;
+        text-shadow: 0 8px 8px var(--marron-chocolate);
+    }
+}
+
 
 /**/
 .contenido_container {
@@ -92,6 +107,11 @@ main  nav a{
     padding: 15px;
     border-radius: 25px;
     background-color: #c0a17729;
+}
+.contenido_container section:hover {
+    box-shadow: 0 8px 12px #f5c37d61;
+    transform: translateY(-2%) scale(1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 .contenido_container section h2{
     font-size: 50px;
@@ -119,7 +139,6 @@ main  nav a{
     grid-template-areas: 'parrafo1 parrafo1 parrafo1'
                         'parrafo2 imagen parrafo3'
                         'parrafo4 parrafo4 parrafo4' ;
-    align-items: center;
 }
 .contenido_container section .contenedores-info p:nth-child(1){
     grid-area: parrafo1;
@@ -139,7 +158,22 @@ main  nav a{
     box-shadow: 0 10px 10px var(--cafe-palido);
     margin: auto;
     border-radius: 10px;
+    height: 90%;
+    object-fit: cover;
+    /***/
+    animation: text-focus-in 5s cubic-bezier(0.950, 0.050, 0.795, 0.035) backwards;
 }
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
 
 /**/
 .contenido_container section:nth-child(2){
