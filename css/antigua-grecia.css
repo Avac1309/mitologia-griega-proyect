@@ -24,6 +24,9 @@ html, body {
 body::-webkit-scrollbar{
     display: none;
 }
+.inactive {
+    display: none;
+}
 
 /**/
 main  nav {
@@ -132,6 +135,7 @@ main  nav a{
 .contenido_container section p span{
     color: var(--amarillo-cafe);
     font-weight: 600;
+    cursor: pointer;
 }
 
 /**/
@@ -171,7 +175,7 @@ main  nav a{
     height: auto;
     grid-template-columns: 1fr 1fr ;
     box-shadow: none;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 }
 .contenido_container section:nth-child(2) aside div {
     border: 1px solid #dbbf97;
@@ -205,65 +209,58 @@ main  nav a{
     width: 60%;
     margin-bottom: 30px;
     border-radius: 15px;
+    box-shadow:0 0 10px var(--beige-claro);
+    /**/
+    animation: titileo 2s ease infinite both;
+}@keyframes titileo {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    41.99% {
+        opacity: 1;
+    }
+    42% {
+        opacity: 0;
+    }
+    43% {
+        opacity: 0;
+    }
+    43.01% {
+        opacity: 1;
+    }
+    45.99% {
+        opacity: 1;
+    }
+    46% {
+        opacity: 0;
+    }
+    46.9% {
+        opacity: 0;
+    }
+    46.91% {
+        opacity: 1;
+    }
+    51.99% {
+        opacity: 1;
+    }
+    52% {
+        opacity: 0;
+    }
+    52.8% {
+        opacity: 0;
+    }
+    52.81% {
+        opacity: 1;
+    }
 }
 
 .contenido_container section:nth-child(3) aside{
     width: 90%;
     margin: auto;
-    display: flex;
-    gap: 2%;
+    display: block;
     height: auto;
 }
-
-
-/* .contenido_container section .contenedores-info p:nth-child(1){
-    grid-area: parrafo1;
-}
-.contenido_container section .contenedores-info p:nth-child(2){
-    grid-area: parrafo2;
-}
-.contenido_container section .contenedores-info p:nth-child(3){
-    grid-area: parrafo3;
-}
-.contenido_container section .contenedores-info p:nth-child(4){
-    grid-area: parrafo4;
-} */
-/* .contenido_container section .contenedores-info img{
-    grid-area: imagen;
-    width: 90%;
-    box-shadow: 0 10px 10px var(--cafe-palido);
-    margin: auto;
-    border-radius: 10px;
-    height: 90%;
-    object-fit: cover;
-    animation: text-focus-in 5s cubic-bezier(0.950, 0.050, 0.795, 0.035) backwards;
-}
-@keyframes text-focus-in {
-    0% {
-        filter: blur(12px);
-        opacity: 0;
-    }
-    100% {
-        filter: blur(0px);
-        opacity: 1;
-    }
-} */
-
-
-/*
-.contenido_container section:nth-child(2){
-    width: 80%;
-    display: flex;
-    gap: 2%;
-    margin: auto;
-}
-.contenido_container section:nth-child(2) div:nth-child(2) h2 {
-    width: 55%;
-}
-.contenido_container section:nth-child(3) h2 {
-    width: 70%;
-}*/
-
 
 /**/
 footer {

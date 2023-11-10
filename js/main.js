@@ -2,6 +2,7 @@ const opciones = document.getElementById('opciones')
 const opcionesMenu = document.querySelector(".aside-de-opciones")
 const informacionAdicional = document.querySelector('.aside-de-informacion')
 const closedOpciones = document.querySelector('.closed-opciones')
+const listaDePuntosClaves = document.querySelector('.listaColonias')
 
 
 opciones.addEventListener('click', abrirOpciones)
@@ -24,6 +25,14 @@ function informacionExtra() {
     console.log('Le diste click para ver infomaciuon extra')
     informacionAdicional.classList.toggle('inactive')
 }
+
+// del archivo antigua-grecia.html ↓
+function puntosClave() {
+    console.log('Le diste click para ver los puntos claves de las Colonias')
+    listaDePuntosClaves.classList.toggle('inactive')
+}
+
+
 //----------------------------------------------------
 
 
