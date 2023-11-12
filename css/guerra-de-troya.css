@@ -109,15 +109,31 @@ main  nav a{
     height: auto;
 }
 .contenido_container h2{
-    font-size: 50px;
-    color: #ddc699;
-    margin: auto;
     padding: 5px 10px;
+    margin: auto;
     text-align: center;
     width: fit-content;
-    border: 1px solid var(--cafe-palido);
-    box-shadow: 0 0 20px var(--cafe-palido);
+    color: var(--amarillo-cafe);
+    font-size: 70px;
+    font-family: 'Dancing Script';
+    font-weight: 400;
+    /**/
+    animation: text-shadow-pop-bottom 1s linear both;
 }
+@keyframes text-shadow-pop-bottom {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        text-shadow: 0 4px 1.5px var(--marron-beige);
+        transform: translate(-4px);
+    }
+    100% {
+        text-shadow: 0 8px 3px #281f17;
+        transform: translateY(-8px);
+    }
+}
+
 /**/
 .contenido_container section aside {
     height: auto;
@@ -167,12 +183,46 @@ main  nav a{
 .contenido_container section aside:nth-child(1) div p:nth-child(3){
     grid-area: parrafo3;
 }
-.contenido_container section aside:nth-child(1) div img {
+.contenido_container section aside:nth-child(1) div .image {
     grid-area: img;
     width: 90%;
     height: 90%;
     margin: auto;
     border-radius: 25px;
+    background-image: url('../img/fondo-fotografiua.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    padding: 15px;
+}
+.contenido_container section aside:nth-child(1) div .image img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 20px #7A664B);
+    animation: titileo 2.5s ease-in-out infinite both;
+} @keyframes titileo {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.95);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
 }
 
 /*aside 2 - rapto de helena*/
@@ -200,7 +250,9 @@ main  nav a{
     height: 90%;
     margin: auto;
     object-fit: cover;
-    border-radius: 25px;
+    border-bottom-left-radius: 55px;
+    border-top-right-radius: 55px;
+    box-shadow: 0 0 15px var(--marron-chocolate);
 }
 
 /*aside 5 - inicio de la guerra*/
@@ -236,7 +288,9 @@ main  nav a{
     height: 90%;
     margin: auto;
     object-fit: cover;
-    border-radius: 25px;
+    border-bottom-left-radius: 55px;
+    border-top-left-radius: 55px;
+    box-shadow: -5px 0 15px #f5c37d6b;
 }
 
 /*aside 7 - muerte de aquiles*/
@@ -284,6 +338,7 @@ main  nav a{
     height: 90%;
     margin: auto;
     border-radius: 25px;
+    box-shadow: 0 0 25px var(--beige-claro);
 }
 
 /*aside 9 - caballo de troya*/
@@ -359,10 +414,12 @@ footer .footer_redes ul li a img {
 
     .contenido_container section aside:nth-child(1) div img{
         width: 90%;
-        margin-top: 20px;
         object-fit: cover;
     }
 
+    .contenido_container section aside:nth-child(5) div img {
+        border-radius: 25px;
+    }
     .contenido_container section aside:nth-child(7) div img{
         width: 95%;
     }
@@ -399,6 +456,7 @@ footer .footer_redes ul li a img {
         flex-direction: column;
     }
 
+    .contenido_container section aside:nth-child(1) div .image,
     .contenido_container section aside:nth-child(2) div img,
     .contenido_container section aside:nth-child(5) div img,
     .contenido_container section aside:nth-child(8) div img {
@@ -406,12 +464,15 @@ footer .footer_redes ul li a img {
         width: 80%;
     }
 
+
     .contenido_container section aside:nth-child(1) div img{
         width: 60%;
         margin-top: 20px;
         object-fit: cover;
     }
-
+    .contenido_container section aside:nth-child(5) div img {
+        border-radius: 25px;
+    }
     .contenido_container section aside:nth-child(7) div img{
         width: 80%;
     }
