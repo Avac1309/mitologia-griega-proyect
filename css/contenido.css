@@ -529,7 +529,7 @@ footer article p {
 /*para pantallas aun mas pequeñas*/
 @media screen and (min-width:320px) and (max-width:480px) {
     .principal {
-        background-image: url("file:///C:/Users/operador34/Downloads/Picsart_23-10-31_11-48-08-956.jpg");
+        background-image: url("../img/imagen-de-fondo.jpg");
     }
     .principal nav{
         padding-right: 0;
@@ -615,7 +615,6 @@ footer article p {
     .secundary .contend{
         width: 100%;
         position: relative;
-        bottom: -10px;
         height: auto;
     }
     .secundary .contend .drch h2{
@@ -713,7 +712,7 @@ footer article p {
 /*Para telefonos moviles (portatil)*/
 @media screen and (min-width:481px) and (max-width:767px) {
     .principal {
-        background-image: url("file:///C:/Users/operador34/Downloads/Picsart_23-10-31_11-48-08-956.jpg");
+        background-image: url("../img/imagen-de-fondo.jpg");
     }
     .principal nav{
         padding-right: 0;
