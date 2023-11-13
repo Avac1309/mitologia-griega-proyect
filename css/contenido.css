@@ -525,8 +525,193 @@ footer article p {
 
 /*---------------------------------MEDIAS QUERIES----------------------------*/
 /*las medidas de losmedias queries son las mismas que utilice para el index.html*/
+
+/*para pantallas aun mas pequeñas*/
+@media screen and (min-width:320px) and (max-width:480px) {
+    .principal {
+        background-image: url("file:///C:/Users/operador34/Downloads/Picsart_23-10-31_11-48-08-956.jpg");
+    }
+    .principal nav{
+        padding-right: 0;
+        align-items: center;
+    }
+    .principal nav h6{
+        color: var(--white);
+        background-color: var(--marron-beige);
+        border: none;
+        font-size: 20px;
+    }
+    .principal aside{
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+    }
+
+    .principal aside .opciones-container {
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        margin: 0 0;
+        overflow-y: auto;
+    }
+    .principal aside .opciones-container a h3,
+    .principal aside .opciones-container a ul {
+        font-size: initial;
+    }
+    .principal .introduction {
+        width: 80%;
+        height: auto;
+        background-color: #1f170f52;
+        box-shadow: 0 0px 200px 0 #1f170f;
+        border-radius: 15px;
+        margin: 50px auto;
+        padding: 30px 5px;
+    }
+    .principal .introduction .contenedor-titulo{
+        padding: 0;
+    }
+    .principal .introduction .contenedor-titulo h1{
+        color: var(--white);
+        font-size: 40px;
+    }
+    .principal .introduction .contenedor-titulo h1 span {
+        font-size: 45px;
+    }
+    .principal .introduction .contenedor-texto {
+        width: 100%;
+    }
+    .principal .introduction .contenedor-texto p {
+        color: var(--white);
+        font-size: 16px;
+    }
+    /**/
+    .principal nav aside .opciones-container .closed-opciones {
+        position: relative;
+        font-size: x-large;
+        width: 20%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    /**/
+    .secundary .cards-flouters{
+        gap: 0;
+    }
+    .secundary .cards-flouters div {
+        margin: 0 5px;
+        width: 60%;
+        animation: none;
+        box-shadow: 0 0 4px var(--marron-chocolate);
+    }
+
+    .secundary .cards-flouters div img {
+        width: 100%;
+        height: 80px;
+    }
+    .secundary .cards-flouters div a {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .secundary .contend{
+        width: 100%;
+        position: relative;
+        bottom: -10px;
+        height: auto;
+    }
+    .secundary .contend .drch h2{
+        font-size: x-large;
+        margin: 10px 0;
+    }
+    .secundary .contend .drch p {
+        font-size: 11px;
+        font-weight: 800;
+        margin: 20px 0;
+    }
+
+    .two-contends .flex-aside .cuadros-flex .tittle {
+        font-size: 15px;
+        text-align: center;
+    }
+    .two-contends .flex-aside .izquierda p, .two-contends .flex-aside .derecha p {
+        width: 95%;
+        font-size: 12px;    
+    }
+
+    .images {
+        margin: 0;
+        height: auto;
+    }
+    .images .cards-image {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: auto;
+    }
+    .images .cards-image .div-1 {
+        grid-row: 1;
+        grid-column: 1;
+    } 
+    .images .cards-image .div-2{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .images .cards-image .div-3{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .images .cards-image .div-4{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+
+    .slider{
+        position: relative;
+    }
+    .slider h4 {
+        font-size: xx-large;
+        text-align: center;
+    }
+    .slider .slider_contend{
+        width: 80%;
+    }
+
+    .comunicaion {
+        gap: 0;
+        grid-template-columns: 1fr 0fr;
+    }
+    .comunicaion .aside-izquierdo form {
+        flex-direction: column;
+    }
+    .comunicaion .aside-izquierdo form label{
+        margin: auto;
+        font-size: larger;
+        width: 90%;
+    }
+    .comunicaion .aside-izquierdo form #comentario {
+        width: 80%;
+        margin: 15px 0;
+    }
+    .comunicaion .aside-izquierdo form input{
+        width: 40%;
+        box-shadow: 0 10px 20px var(--marron-beige);
+    background: linear-gradient(135deg,#cebc9b,#7A664B );
+    }
+    .comunicaion .aside-izquierdo form input:hover{
+    transform: none;
+    transform: none;
+    }
+    .comunicaion .aside-derecho{
+        width: 100%;
+    }
+    .comunicaion .aside-derecho .redes-sociales{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /*Para telefonos moviles (portatil)*/
-@media screen and (min-width:360px) and (max-width:767px) {
+@media screen and (min-width:481px) and (max-width:767px) {
     .principal {
         background-image: url("file:///C:/Users/operador34/Downloads/Picsart_23-10-31_11-48-08-956.jpg");
     }
