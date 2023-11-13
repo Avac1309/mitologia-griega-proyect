@@ -21,6 +21,7 @@ html, body {
     height: 100%;
     background-color: var(--marron-cafe);
 }
+/*evitar que se vea la barra de scroll por defecto*/
 body::-webkit-scrollbar{
     display: none;
 }
@@ -156,23 +157,34 @@ header nav aside .opciones-container a ul {
     text-shadow: 0 10px 3px var(--marron-chocolate);
     font-family: var(--font-family-elegante);
     margin: 30px 0;
-
-    /**/
+    /*animacion*/
 	animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }  
 @keyframes tracking-in-expand-fwd-top {
-        0% {
-            letter-spacing: -0.5em;
-            transform: translateZ(-700px) translateY(-500px);
-            opacity: 0;
-        }
-        40% {
-            opacity: 0.6;
-        }
-        100% {
-            transform: translateZ(0) translateY(0);
-            opacity: 1;
-        }
+    /* Estado inicial de la animación (0%) */
+
+    0% {
+        /* Reducción del espacio entre letras a -0.5em */
+        letter-spacing: -0.5em;
+        /* Transformación 3D: desplazamiento en el eje Z y Y con opacidad cero */
+        transform: translateZ(-700px) translateY(-500px);
+        opacity: 0;
+    }
+
+    /* Estado intermedio de la animación (40%) */
+
+    40% {
+        /* Opacidad intermedia del elemento: 0.6 (parcialmente transparente) */
+        opacity: 0.6;
+    }
+
+    /* Estado final de la animación (100%) */
+
+    100% {
+        /* Restablece la transformación a su posición original con opacidad completa */
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
 }
 .contenido .contenido_container {
     display: flex;
@@ -205,7 +217,7 @@ header nav aside .opciones-container a ul {
     height: auto;
     object-fit: contain;
     border-radius: 25px;
-    /**/
+    /*animacion*/
     animation: titileo 2s linear infinite both;
 }
 @keyframes titileo{
@@ -253,7 +265,7 @@ header nav aside .opciones-container a ul {
     border-right:transparent; /* Efecto del cursor de la mÃ¡quina de escribir */
     white-space: nowrap;  /*Evitar el salto de lÃ­nea */
     letter-spacing: 1px; /* Espaciado entre letras */
-    animation: monoescrito 10s steps(62) 8s infinite;
+    animation: monoescrito 10s steps(62) 8s infinite; /*animacion*/
 }
 @keyframes monoescrito {
     from {
@@ -320,18 +332,27 @@ header nav aside .opciones-container a ul {
     height: 100%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    /**/
+    /*animacion*/
     animation: swing-in-top-fwd 10.5s ease-in-out infinite;
 }
 @keyframes swing-in-top-fwd {
+    /* Estado inicial de la animación (0%) */
     0% {
+        /* Gira el elemento alrededor del eje X en -100 grados */
         transform: rotateX(-100deg);
+        /* Establece el punto de origen de la transformación en la parte superior del elemento */
         transform-origin: top;
+        /* Establece la opacidad inicial del elemento en cero */
         opacity: 0;
     }
+
+    /* Estado final de la animación (100%) */
     100% {
+        /* Restablece la rotación alrededor del eje X a 0 grados */
         transform: rotateX(0deg);
+        /* Mantiene el punto de origen de la transformación en la parte superior del elemento */
         transform-origin: top;
+        /* Establece la opacidad del elemento en su valor completo (1) */
         opacity: 1;
     }
 }
@@ -345,7 +366,7 @@ header nav aside .opciones-container a ul {
     font-weight: 600;
     font-family: auto;
 }
-/**/
+/*footer*/
 footer {
     width: 100%;
     height: auto;

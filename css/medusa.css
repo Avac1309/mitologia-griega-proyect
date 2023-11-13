@@ -1,3 +1,4 @@
+/*variables globalles*/
 :root { 
     --font-primero: 'Bebas Neue', cursive;
     --white: #e3dfd7;
@@ -21,6 +22,7 @@ html, body {
     height: 100%;
     background-color: #554429;
 }
+/*evitar la barra de scroll que se ve por defecto*/
 body::-webkit-scrollbar{
     display: none;
 }
@@ -79,18 +81,27 @@ main  nav a{
     font-family: var(--font-family-cursive);
     color: var(--white-amarillo);
     text-align: center;
-    /**/
+    /*animacion*/
     animation: tittle-up-top 1.5s ease-in forwards;
 }
-@keyframes tittle-up-top {
+@keyframes tittle-up-top { /*efecto de la animacion**/
     0% {
+        /* No hay transformación en el eje Y al principio de la animación */
         transform: translateY(0);
+        /* El punto de origen de la transformación está en el centro del elemento */
         transform-origin: 50% 50%;
+        /* No hay sombra de texto al principio de la animación */
         text-shadow: none;
     }
+    
+      /* Estado final de la animación (100%) */
+    
     100% {
-        transform: translateY(-25px);
+        /* Desplaza el elemento hacia arriba en el eje Y en 30px */
+        transform: translateY(-30px);
+        /* El punto de origen de la transformación sigue siendo el centro del elemento */
         transform-origin: 50% 50%;
+        /* Aplica una sombra de texto al final de la animación: desplazamiento vertical de 8px, desplazamiento horizontal de 8px y color de sombra definido por la variable "--marron-chocolate" */
         text-shadow: 0 8px 8px var(--marron-chocolate);
     }
 }
@@ -145,7 +156,7 @@ main  nav a{
 }
 
 
-/*section 1*/
+/*estilos para la section 1*/
 .contenido_container section:nth-child(1) div {
     width: 90%;
     margin: 50px auto 15px;
@@ -170,7 +181,7 @@ main  nav a{
     text-shadow: 0 2px 5px #372819;
 }
 
-/*section 2*/
+/*estilos para la section 2*/
 .contenido_container section:nth-child(2) {
     padding: 15px 35px;
 }
@@ -199,7 +210,7 @@ main  nav a{
     margin: 0 15px 15px;
 }
 
-/*section 3*/
+/*estilos para la section 3*/
 .contenido_container section:nth-child(3){
     display: flex;
     flex-direction: column;
@@ -212,7 +223,7 @@ main  nav a{
     border-radius: 40px;
 }
 
-/**/
+/*footer*/
 footer {
     width: 100%;
     height: auto;

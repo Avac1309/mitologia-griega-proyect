@@ -21,6 +21,7 @@ html, body {
     height: 100%;
     background-color: var(--marron-cafe);
 }
+/*evitar la barra de scroll por defecto*/
 body::-webkit-scrollbar{
     display: none;
 }
@@ -30,15 +31,26 @@ body::-webkit-scrollbar{
 
 /*Estilos al navbar (encabezado)*/
 header nav{
+    /* Establece el radio de curvatura de la esquina inferior izquierda a 31px */
     border-bottom-left-radius: 31px;
+    /* Establece el radio de curvatura de la esquina inferior derecha a 31px */
     border-bottom-right-radius: 31px;
+
+    /* Establece el ancho del elemento al 100% del contenedor padre */
     width: 100%;
+    /* Ajusta la altura automáticamente según el contenido */
     height: auto;
+
+    /* Establece el color de fondo utilizando una variable CSS llamada "--marron-beige" */
     background-color: var(--marron-beige);
+
+    /* Utiliza el modelo de caja flexible (flexbox) para organizar los elementos internos y Distribuye el espacio entre los elementos internos para que ocupen todo el ancho del contenedor */
     display: flex;
-    /* padding-right: 90px; */
     justify-content: space-between;
+    /* Alinea los elementos hijos en la parte inferior del contenedor */
     align-items: flex-end;
+
+    /* Aplica una sombra al elemento*/
     box-shadow: 0 5px 10px #7a664b;
 }
 
@@ -157,8 +169,7 @@ header nav aside .opciones-container a ul {
     text-shadow: 0 10px 3px var(--marron-chocolate);
     font-family: var(--font-family-elegante);
     margin: 30px 0;
-
-    /**/
+    /*animacion*/
 	animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }  
 @keyframes tracking-in-expand-fwd-top {
@@ -212,8 +223,7 @@ header nav aside .opciones-container a ul {
 .contenido .contenido_container .informacion-actual img {
     width: 90%;
     margin: 0 auto;
-
-    
+    /*animacion*/
     animation: fade-in-fwd 4.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite;
 }
 @keyframes fade-in-fwd {
@@ -226,6 +236,7 @@ header nav aside .opciones-container a ul {
         opacity: 1;
     }
 }
+
 /**/
 .contenido .contenido_container section .slider {
     width: 100%;
@@ -237,25 +248,46 @@ header nav aside .opciones-container a ul {
 }
 
 .contenido .contenido_container section .slider .slider_contend {
+    /* Establece el desplazamiento horizontal pero oculta el desplazamiento vertical */
     overflow-x: scroll;
     overflow-y: hidden;
+
+    /* Define el comportamiento de desplazamiento para el contenido, tanto en el inicio como en el final */
     scroll-snap-type: both;
+
+    /* Utiliza el modelo de flex para organizar los elementos internos */
     display: flex;
+
+    /* Establece un espacio entre los elementos internos */
     gap: 4%;
+
+    /* Agrega un relleno en la parte inferior del contenedor interno */
     padding-bottom: 1rem;
+
+    /* Establece el ancho del contenedor interno al 90% del contenedor padre */
     width: 90%;
+
+    /* Establece la altura del contenedor interno al 80% del contenedor padre */
     height: 80%;
 
+    /* Establece la posición del contenedor interno como relativa con respecto a su contenedor padre */
     position: relative;
 }
-.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar{
+
+/* Estilo para la barra de desplazamiento en navegadores WebKit (como Chrome y Safari) */
+/* Establece el ancho de la barra de desplazamiento al 25% del ancho del contenedor */
+.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar {
     width: 25%;
 }
-.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar-track{
+
+/* Estilo para la pista de la barra de desplazamiento */
+.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar-track {
     background-color: #b0a48d78;
     border-radius: 20px;
 }
-.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar-thumb{
+
+/* Estilo para el pulgar (la parte móvil) de la barra de desplazamiento */
+.contenido .contenido_container section .slider .slider_contend::-webkit-scrollbar-thumb {
     background-color: var(--white);
     border-radius: 20px;
 }
@@ -288,7 +320,6 @@ header nav aside .opciones-container a ul {
     left: auto;
     height: 80%;
     width: 300px;
-    /* background-color: #372819a8; */
     background-color: #352719b0;
     box-shadow: inset 0 0 12px #4d3e30;
     padding: 20px;
@@ -312,7 +343,8 @@ header nav aside .opciones-container a ul {
 .contenido .contenido_container .slider .slider_contend article aside div p{
     color: #f4d2a2;
 }
-/**/
+
+/*footer*/
 footer {
     width: 100%;
     height: auto;

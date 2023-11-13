@@ -1,3 +1,4 @@
+/*variables globales*/
 :root { 
     --font-primero: 'Bebas Neue', cursive;
     --white: #e3dfd7;
@@ -21,6 +22,7 @@ html, body {
     height: 100%;
     background-color: #554429;
 }
+/*para evitar que se vea la barra de scxroll por defecto*/
 body::-webkit-scrollbar{
     display: none;
 }
@@ -79,15 +81,24 @@ main  nav a{
     /**/
     animation: tittle-up-top 1.5s ease-in forwards;
 }
-@keyframes tittle-up-top {
+@keyframes tittle-up-top { /*efecto de la animacion**/
     0% {
+        /* No hay transformación en el eje Y al principio de la animación */
         transform: translateY(0);
+        /* El punto de origen de la transformación está en el centro del elemento */
         transform-origin: 50% 50%;
+        /* No hay sombra de texto al principio de la animación */
         text-shadow: none;
     }
+    
+      /* Estado final de la animación (100%) */
+    
     100% {
-        transform: translateY(-50px);
+        /* Desplaza el elemento hacia arriba en el eje Y en 30px */
+        transform: translateY(-30px);
+        /* El punto de origen de la transformación sigue siendo el centro del elemento */
         transform-origin: 50% 50%;
+        /* Aplica una sombra de texto al final de la animación: desplazamiento vertical de 8px, desplazamiento horizontal de 8px y color de sombra definido por la variable "--marron-chocolate" */
         text-shadow: 0 8px 8px var(--marron-chocolate);
     }
 }
@@ -108,9 +119,12 @@ main  nav a{
     border-radius: 25px;
     background-color: #c0a17729;
 }
+/* Agrega una sombra alrededor de la sección al pasar el ratón*/
 .contenido_container section:hover {
     box-shadow: 0 8px 12px #f5c37d61;
+    /* Desplaza la sección hacia arriba en un 2% y la escala en un 100% del tamaño original */
     transform: translateY(-2%) scale(1);
+    /* Establece una transición suave para la transformación de la sección al pasar el ratón */
     transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 .contenido_container section h2{
@@ -130,45 +144,50 @@ main  nav a{
     font-size: 20px;
     text-align: justify;
 }
+
 /**/
 .contenido_container section .contenedores-info {
     display: grid;
     height: auto;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr; */
     grid-template-areas: 'parrafo1 parrafo1 parrafo1'
                         'parrafo2 imagen parrafo3'
                         'parrafo4 parrafo4 parrafo4' ;
 }
 .contenido_container section .contenedores-info p:nth-child(1){
-    grid-area: parrafo1;
+    grid-area: parrafo1; /*asignacion de posicion de areas*/
 }
 .contenido_container section .contenedores-info p:nth-child(2){
-    grid-area: parrafo2;
+    grid-area: parrafo2; /*asignacion de posicion de areas*/
 }
 .contenido_container section .contenedores-info p:nth-child(3){
-    grid-area: parrafo3;
+    grid-area: parrafo3; /*asignacion de posicion de areas*/
 }
 .contenido_container section .contenedores-info p:nth-child(4){
-    grid-area: parrafo4;
+    grid-area: parrafo4; /*asignacion de posicion de areas*/
 }
 .contenido_container section .contenedores-info img{
-    grid-area: imagen;
+    grid-area: imagen; /*asignacion de posicion de areas*/
     width: 90%;
     box-shadow: 0 10px 10px var(--cafe-palido);
     margin: auto;
     border-radius: 10px;
     height: 90%;
     object-fit: cover;
-    /***/
+    /*animacion*/
     animation: text-focus-in 5s cubic-bezier(0.950, 0.050, 0.795, 0.035) backwards;
 }
 @keyframes text-focus-in {
+     /* Estado inicial de la animación (0%) */
     0% {
+        /* Aplica un desenfoque de 12px y establece la opacidad en cero al principio de la animación */
         filter: blur(12px);
         opacity: 0;
     }
+
+    /* Estado final de la animación (100%) */
     100% {
+        /* Restablece el desenfoque a 0px y la opacidad a su valor completo (1) al final de la animación */
         filter: blur(0px);
         opacity: 1;
     }
@@ -190,7 +209,7 @@ main  nav a{
 }
 
 
-/**/
+/*footer*/
 footer {
     width: 100%;
     height: auto;

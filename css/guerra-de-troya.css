@@ -1,3 +1,4 @@
+/*variables globales*/
 :root { 
     --font-primero: 'Bebas Neue', cursive;
     --white: #e3dfd7;
@@ -21,6 +22,7 @@ html, body {
     height: 100%;
     background-color: #554429;
 }
+/*evitar la barra de scroll por defecto*/
 body::-webkit-scrollbar{
     display: none;
 }
@@ -79,18 +81,27 @@ main  nav a{
     font-family: var(--font-family-cursive);
     color: var(--white-amarillo);
     text-align: center;
-    /**/
+    /*animacion*/
     animation: tittle-up-top 1.5s ease-in forwards;
 }
-@keyframes tittle-up-top {
+@keyframes tittle-up-top { /*efecto de la animacion**/
     0% {
+        /* No hay transformación en el eje Y al principio de la animación */
         transform: translateY(0);
+        /* El punto de origen de la transformación está en el centro del elemento */
         transform-origin: 50% 50%;
+        /* No hay sombra de texto al principio de la animación */
         text-shadow: none;
     }
+    
+      /* Estado final de la animación (100%) */
+    
     100% {
+        /* Desplaza el elemento hacia arriba en el eje Y en 30px */
         transform: translateY(-30px);
+        /* El punto de origen de la transformación sigue siendo el centro del elemento */
         transform-origin: 50% 50%;
+        /* Aplica una sombra de texto al final de la animación: desplazamiento vertical de 8px, desplazamiento horizontal de 8px y color de sombra definido por la variable "--marron-chocolate" */
         text-shadow: 0 8px 8px var(--marron-chocolate);
     }
 }
@@ -117,7 +128,7 @@ main  nav a{
     font-size: 70px;
     font-family: 'Dancing Script';
     font-weight: 400;
-    /**/
+    /*animacion*/
     animation: text-shadow-pop-bottom 1s linear both;
 }
 @keyframes text-shadow-pop-bottom {
@@ -170,21 +181,21 @@ main  nav a{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0fr;
-    grid-template-areas: 'parrafo1 img'
+    grid-template-areas: 'parrafo1 img' 
                 'parrafo2 img'
-                'parrafo3 img';
+                'parrafo3 img'; /*posiciones de areas*/
 } 
 .contenido_container section aside:nth-child(1) div p:nth-child(1){
-    grid-area: parrafo1;
+    grid-area: parrafo1; /*asignacion del lugar dearea*/
 }
 .contenido_container section aside:nth-child(1) div p:nth-child(2){
-    grid-area: parrafo2;
+    grid-area: parrafo2; /*asignacion del lugar dearea*/
 }
 .contenido_container section aside:nth-child(1) div p:nth-child(3){
-    grid-area: parrafo3;
+    grid-area: parrafo3; /*asignacion del lugar dearea*/
 }
 .contenido_container section aside:nth-child(1) div .image {
-    grid-area: img;
+    grid-area: img; /*asignacion del lugar dearea*/
     width: 90%;
     height: 90%;
     margin: auto;
@@ -200,25 +211,42 @@ main  nav a{
     width: 100%;
     height: 100%;
     filter: drop-shadow(0px 0px 20px #7A664B);
+    /*animacion*/
     animation: titileo 2.5s ease-in-out infinite both;
 } @keyframes titileo {
     from {
+        /* Escala inicial del elemento: 1 (tamaño original) */
         transform: scale(1);
+    
+        /* El punto de origen de la transformación está en el centro del elemento */
         transform-origin: center center;
+    
+        /* Función de temporización de la animación: ease-out (inicia rápido y se desacelera hacia el final) */
         animation-timing-function: ease-out;
     }
+    
+      /* Estado intermedio de la animación (10%) */
+    
     10% {
+        /* Reduce la escala del elemento a 0.91 */
         transform: scale(0.91);
+    
+        /* Función de temporización de la animación: ease-in (inicia lento y se acelera hacia el final) */
         animation-timing-function: ease-in;
     }
+    
+      /* Otros estados intermedios de la animación (17%, 33%, 45%) */
+    
     17% {
         transform: scale(0.98);
         animation-timing-function: ease-out;
     }
+    
     33% {
         transform: scale(0.95);
         animation-timing-function: ease-in;
     }
+    
     45% {
         transform: scale(1);
         animation-timing-function: ease-out;
@@ -236,16 +264,16 @@ main  nav a{
                         'parrafo3 parrafo3';
 } 
 .contenido_container section aside:nth-child(2) div p:nth-child(1){
-    grid-area: parrafo1;
+    grid-area: parrafo1; /*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(2) div p:nth-child(2){
-    grid-area: parrafo2;
+    grid-area: parrafo2; /*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(2) div p:nth-child(3){
-    grid-area: parrafo3;
+    grid-area: parrafo3; /*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(2) div img {
-    grid-area: img;
+    grid-area: img; /*asignacion de posicion de area*/
     width: 90%;
     height: 90%;
     margin: auto;
@@ -268,22 +296,22 @@ main  nav a{
                         'parrafo5 parrafo5';
 } 
 .contenido_container section aside:nth-child(5) div p:nth-child(1){
-    grid-area: parrafo1;
+    grid-area: parrafo1;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(5) div p:nth-child(2){
-    grid-area: parrafo2;
+    grid-area: parrafo2;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(5) div p:nth-child(3){
-    grid-area: parrafo3;
+    grid-area: parrafo3;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(5) div p:nth-child(4){
-    grid-area: parrafo4;
+    grid-area: parrafo4;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(5) div p:nth-child(5){
-    grid-area: parrafo5;
+    grid-area: parrafo5;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(5) div img {
-    grid-area: img;
+    grid-area: img;/*asignacion de posicion de area*/
     width: 90%;
     height: 90%;
     margin: auto;
@@ -321,19 +349,19 @@ main  nav a{
                         'parrafo4 parrafo4';
 } 
 .contenido_container section aside:nth-child(8) div p:nth-child(1){
-    grid-area: parrafo1;
+    grid-area: parrafo1;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(8) div p:nth-child(2){
-    grid-area: parrafo2;
+    grid-area: parrafo2;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(8) div p:nth-child(3){
-    grid-area: parrafo3;
+    grid-area: parrafo3;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(8) div p:nth-child(4){
-    grid-area: parrafo4;
+    grid-area: parrafo4;/*asignacion de posicion de area*/
 }
 .contenido_container section aside:nth-child(8) div img {
-    grid-area: img;
+    grid-area: img;/*asignacion de posicion de area*/
     width: 90%;
     height: 90%;
     margin: auto;

@@ -1,3 +1,4 @@
+/*estilos globales*/
 :root { 
     --font-primero: 'Bebas Neue', cursive;
     --white: #e3dfd7;
@@ -21,6 +22,7 @@ html, body {
     height: 100%;
     background-color: #554429;
 }
+/*evitar la barra de scroll por defecto*/
 body::-webkit-scrollbar{
     display: none;
 }
@@ -49,16 +51,31 @@ main  nav a{
 }
 
 /**/
+
+/* Estilo para la clase principal */
 .principal {
+    /* Imagen de fondo que cubre toda la pantalla */
     background-image: url(https://i.pinimg.com/736x/cd/8e/6e/cd8e6e4b11fdb2d7a42176dc34026cf0.jpg);
+
+    /* El tamaño de la imagen de fondo se adapta al elemento */
     background-size: cover;
+    /* La imagen de fondo no se repite */
     background-repeat: no-repeat;
+    /* La imagen de fondo se centra en el elemento */
     background-position: center;
+
+    /* Sombra en la parte inferior del elemento */
     box-shadow: 0 6px 20px #9c8c6f;
+    /* Elemento como contenedor flexible */
     display: flex;
+    /* Dirección de los elementos en el contenedor flexible */
     flex-direction: column;
+    /* Altura del elemento */
     height: 650px;
+    /* Ancho del elemento */
     width: 100%;
+
+    /* Radio de la bordes redondeadas de la parte inferior del elemento */
     border-bottom-left-radius: 45px;
     border-bottom-right-radius: 45px;
 }
@@ -79,18 +96,28 @@ main  nav a{
     font-family: var(--font-family-cursive);
     color: var(--white-amarillo);
     text-align: center;
-    /**/
+    /*animacion*/
     animation: tittle-up-top 1.5s ease-in forwards;
 }
+/*funcion de la animacion*/
 @keyframes tittle-up-top {
     0% {
+        /* No hay transformación en el eje Y al principio de la animación */
         transform: translateY(0);
+        /* El punto de origen de la transformación está en el centro del elemento */
         transform-origin: 50% 50%;
+        /* No hay sombra de texto al principio de la animación */
         text-shadow: none;
     }
+    
+      /* Estado final de la animación (100%) */
+    
     100% {
-        transform: translateY(-50px);
+        /* Desplaza el elemento hacia arriba en el eje Y en 30px */
+        transform: translateY(-30px);
+        /* El punto de origen de la transformación sigue siendo el centro del elemento */
         transform-origin: 50% 50%;
+        /* Aplica una sombra de texto al final de la animación: desplazamiento vertical de 8px, desplazamiento horizontal de 8px y color de sombra definido por la variable "--marron-chocolate" */
         text-shadow: 0 8px 8px var(--marron-chocolate);
     }
 }
@@ -112,7 +139,9 @@ main  nav a{
     background-color: #c0a17729;
 }
 .contenido_container section:hover {
+    /*sombreado al que el cursor este encima*/
     box-shadow: 0 8px 12px #f5c37d61;
+    /*animacion delsombreado*/
     transform: translateY(-2%) scale(1);
     transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
@@ -138,7 +167,7 @@ main  nav a{
     cursor: pointer;
 }
 
-/**/
+/*estilos a la primera setcion con el :nth-child(-number-)*/
 .contenido_container section:nth-child(1) ol {
     width: 70%;
     margin: auto;
@@ -160,7 +189,7 @@ main  nav a{
     list-style: inside;
 }
 
-/*Section 2*/
+/* para la Section 2*/
 .contenido_container section:nth-child(2) p {
     margin: 20px auto 30px;
     width: 90%;
@@ -195,7 +224,7 @@ main  nav a{
     text-align: justify;
 }
 
-/*Section 3*/
+/*para la Section 3*/
 .contenido_container section:nth-child(3) {
     display: flex;
     flex-direction: column;
@@ -210,7 +239,7 @@ main  nav a{
     margin-bottom: 30px;
     border-radius: 15px;
     box-shadow:0 0 10px var(--beige-claro);
-    /**/
+    /*animacion*/
     animation: titileo 2s ease infinite both;
 }@keyframes titileo {
     0%,
@@ -262,7 +291,7 @@ main  nav a{
     height: auto;
 }
 
-/**/
+/*estilos del footer*/
 footer {
     width: 100%;
     height: auto;

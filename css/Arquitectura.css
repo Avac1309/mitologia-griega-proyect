@@ -20,7 +20,6 @@ html, body {
     width: 100%;
     height: 100%;
     height: 100%;
-    /* background-color: var(--marron-cafe); */
 }
 body::-webkit-scrollbar{
     display: none;
@@ -45,7 +44,6 @@ header nav{
     height: auto;
     background-color: var(--marron-beige);
     display: flex;
-    /* padding-right: 90px; */
     justify-content: space-between;
     align-items: flex-end;
     box-shadow: 0 5px 10px #7a664b;
@@ -168,9 +166,9 @@ header nav aside .opciones-container a ul {
     font-family: var(--font-family-elegante);
     margin: 30px 0;
 
-    /**/
+    /*animacion*/
 	animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
+} /*estilos de la animacion*/
 @keyframes tracking-in-expand-fwd-top {
         0% {
             letter-spacing: -0.5em;
@@ -252,7 +250,7 @@ header nav aside .opciones-container a ul {
     border-radius:25px ;
     width: 100%;
     height: 100%;
-    /**/
+    /*animacion*/
     animation: titileo-con-desenfoque 3.9s infinite both;
 }
 @keyframes titileo-con-desenfoque {
@@ -293,7 +291,7 @@ header nav aside .opciones-container a ul {
     object-fit: revert;
     box-shadow:-5px 5px 30px var(--cafe-palido);
     border-radius: 20px;
-    /**/
+    /*animacion*/
     animation:zoom-stop 5s ease-out 2s infinite backwards;
 }
 @keyframes zoom-stop{
@@ -307,7 +305,7 @@ header nav aside .opciones-container a ul {
     }
 }
 
-/**/
+/*footer*/
 footer {
     width: 100%;
     height: auto;

@@ -21,6 +21,7 @@ html, body {
     height: 100%;
     background-color: var(--marron-cafe);
 }
+/*evitar la barra de scroll por defecto*/
 body::-webkit-scrollbar{
     display: none;
 }
@@ -36,7 +37,6 @@ header nav{
     height: auto;
     background-color: var(--marron-beige);
     display: flex;
-    /* padding-right: 90px; */
     justify-content: space-between;
     align-items: flex-end;
     box-shadow: 0 5px 10px #7a664b;
@@ -157,10 +157,10 @@ header nav aside .opciones-container a ul {
     font-family: var(--font-family-elegante);
     margin: 30px 0;
 
-    /**/
+    /*animacion*/
 	animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }  
-@keyframes tracking-in-expand-fwd-top {
+@keyframes tracking-in-expand-fwd-top { /*funcion de la animacion*/
         0% {
             letter-spacing: -0.5em;
             transform: translateZ(-700px) translateY(-500px);
@@ -196,9 +196,16 @@ header nav aside .opciones-container a ul {
 
 .contenido .contenido_container section .container-informacion {
     display: grid;
+    /* Divide el contenedor en dos columnas de igual tamaño */
     grid-template-columns: 1fr 1fr;
+
+    /* Divide el contenedor en dos filas: una de 300px y otra de 100px */
     grid-template-rows: 300px 100px;
+
+    /* Asigna áreas específicas a cada elemento interno */
     grid-template-areas: 'p1 img' 'p2 p2';
+
+    /* Centra los elementos hijos verticalmente en el contenedor */
     align-items: center;
 }
 .contenido .contenido_container section p {
@@ -208,16 +215,16 @@ header nav aside .opciones-container a ul {
     text-align: justify;
 }
 .contenido .contenido_container section .container-informacion p:nth-child(1){
-    grid-area: p1;
+    grid-area: p1;/*asignacion del puesto de  area*/
 }
 .contenido .contenido_container section .container-informacion img{
-    grid-area: img;
+    grid-area: img;/*asignacion del puesto de  area*/
     width: 85%;
     height: 85%;
     margin: 20px 10px;
     padding: 0;
     object-fit: initial;
-
+    /*animacion*/
     animation: swing-in-left-fwd 4.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
 @keyframes swing-in-left-fwd {
@@ -234,7 +241,7 @@ header nav aside .opciones-container a ul {
 }
 
 .contenido .contenido_container section .container-informacion p:nth-child(3){
-    grid-area: p2;
+    grid-area: p2;/*asignacion del puesto de  area*/
 }
 
 /**/
@@ -249,23 +256,23 @@ header nav aside .opciones-container a ul {
 }
 
 .contenido .contenido_container section .container-informacion-2 p:nth-child(1){
-    grid-area: p1-ol;
+    grid-area: p1-ol;/*asignacion del puesto de  area*/
 }
 .contenido .contenido_container section .container-informacion-2 ol {
-    grid-area: p1-ol;
+    grid-area: p1-ol;/*asignacion del puesto de  area*/
     margin-top: 80px;
 }
 .contenido .contenido_container section .container-informacion-2 p:nth-child(3){
-    grid-area: p2;
+    grid-area: p2;/*asignacion del puesto de  area*/
 }
 .contenido .contenido_container section .container-informacion-2 img{
-    grid-area: img;
+    grid-area: img;/*asignacion del puesto de  area*/
     width: 85%;
     height: 85%;
     margin: 20px auto;
     padding: 0;
     object-fit: initial;
-
+    /*animacion*/
     animation: slide-in-fwd-center 2.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
 }
 @keyframes slide-in-fwd-center {
@@ -279,12 +286,13 @@ header nav aside .opciones-container a ul {
     }
 }
 .contenido .contenido_container section .container-informacion-2 p:nth-child(5){
-    grid-area: p3;
+    grid-area: p3;/*asignacion del puesto de  area*/
 }
 .contenido .contenido_container section .container-informacion-2 p:nth-child(6){
-    grid-area: p4;
+    grid-area: p4;/*asignacion del puesto de  area*/
 }
-/**/
+
+/*estilos en las listas*/
 .contenido .contenido_container section ol {
     display: flex;
     width: 80%;
@@ -307,7 +315,7 @@ header nav aside .opciones-container a ul {
     color: var(--cafe-palido);
     letter-spacing: 1px;
 }
-/**/
+/*footer*/
 footer {
     width: 100%;
     height: auto;

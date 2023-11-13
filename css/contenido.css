@@ -128,7 +128,7 @@ body::-webkit-scrollbar{
     border-right:transparent; /* Efecto del cursor de la mÃ¡quina de escribir */
     white-space: nowrap; /* Evitar el salto de lÃ­nea */
     letter-spacing: 1px; /* Espaciado entre letras */
-    animation: monoescrito 4s steps(18) infinite;
+    animation: monoescrito 4s steps(18) infinite; /*animacion*/
 }
 @keyframes monoescrito {
     from {
@@ -190,7 +190,7 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /**/
+    /*animacion*/
     animation: shadow-div 4.3s linear both;
 }
 @keyframes shadow-div {
@@ -296,6 +296,7 @@ body::-webkit-scrollbar{
     font-size: 25px;
     margin: 20px 0;
     font-family: 'Young Serif';
+    /*animacion*/
     animation: movimiento-de-latido 1.5s linear infinite both;
 }
     @keyframes movimiento-de-latido {
@@ -399,21 +400,31 @@ body::-webkit-scrollbar{
 }
 
 .slider .slider_contend {
+    /* Hace que el contenido desborde horizontalmente, permitiendo el desplazamiento horizontal */
     overflow-x: scroll;
+    /* Define el comportamiento de desplazamiento para el contenido, tanto en el inicio como en el final */
     scroll-snap-type: both;
+    /* Utiliza el modelo de caja flexible (flexbox) para organizar los elementos internos */
     display: flex;
+
     gap: 4%;
     padding-bottom: 1rem;
     width: 70%;
     height: 80%;
 }
-.slider .slider_contend::-webkit-scrollbar{
+
+/* Establece el ancho de la barra de desplazamiento al 25% del ancho del contenedor */
+.slider .slider_contend::-webkit-scrollbar {
     width: 25%;
 }
+
+/* Estilo para la pista de la barra de desplazamiento */
 .slider .slider_contend::-webkit-scrollbar-track{
     background: var(--beige-claro);
     border-radius: 20px;
 }
+
+/* Estilo para el pulgar (la parte móvil) de la barra de desplazamiento */
 .slider .slider_contend::-webkit-scrollbar-thumb{
     background-color: var(--marron-cafe);
     border-radius: 20px;
@@ -430,10 +441,8 @@ body::-webkit-scrollbar{
     object-fit: cover;
     border-radius: 10px;
 }
-/**/
 
-/*estilo al footer*/
-
+/*footer*/
 .comunicaion {
     background-color: var(--marron-cafe);
     width: 100%;
@@ -483,9 +492,16 @@ body::-webkit-scrollbar{
 
 }  
 .comunicaion .aside-izquierdo form input:hover{
+    /* Aplica una sombra al input al pasar el mouse: desplazamiento vertical de 10px, desplazamiento horizontal de 0, desenfoque de 20px y color definido por la variable "--marron-beige" */
     box-shadow: 0 10px 20px var(--marron-beige);
-    background: linear-gradient(135deg,#cebc9b,#7A664B );
+
+    /* Aplica un fondo al input al pasar el mouse: un degradado lineal con una dirección de 135 grados*/
+    background: linear-gradient(135deg, #cebc9b, #7A664B);
+
+    /* Transforma el input al pasar el mouse: desplaza hacia arriba en un 10% y escala en un 110% del tamaño original */
     transform: translateY(-10%) scale(1.1);
+
+    /* Establece una transición suave para la transformación del input al pasar el mouse*/
     transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 /**/
